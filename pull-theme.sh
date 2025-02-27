@@ -1,4 +1,13 @@
-#!/bin/env bash
+#!/usr/bin/env bash
+###
+# File: pull-theme.sh
+# Author: Served Smart (servedsmart@gmail.com)
+# -----
+# Copyright (c) 2025 Served Smart & contributors
+# SPDX ID: MIT
+# URL: https://opensource.org/licenses/MIT
+# -----
+###
 
 # Set SCRIPT_DIR
 SCRIPT_DIR="$(dirname -- "$(readlink -f -- "$0")")"
