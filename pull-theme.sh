@@ -22,7 +22,7 @@ if [ -d "$SCRIPT_DIR"/themes/"$THEME_NAME" ]; then
     cd "$SCRIPT_DIR"/themes/"$THEME_NAME"
     git submodule update --remote
 else
-    git submodule add -f "$THEME_REPO" "$SCRIPT_DIR"/themes/"$THEME_NAME"
+    git submodule add "$THEME_REPO" "$SCRIPT_DIR"/themes/"$THEME_NAME"
 fi
 
 # Set theme in hugo.toml
