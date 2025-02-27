@@ -27,7 +27,7 @@ fi
 
 # Set theme in hugo.toml
 ## START sed
-FILE="$SCRIPT_DIR"/hugo.toml
+FILE="$SCRIPT_DIR"/config/_default/hugo.toml
 STRING="theme =.*"
 if grep -q "$STRING" "$FILE"; then
     sed -i "s/$STRING/theme = '$THEME_NAME'/" "$FILE"
