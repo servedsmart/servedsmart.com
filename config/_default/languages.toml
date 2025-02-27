@@ -23,8 +23,6 @@ keywords = [
  'internet',
 ]
 
-DateFormat = '2000-01-30'
-
 [de.params.editPost]
 URL = 'https://github.com/servedsmart/servedsmart.com/content'
 Text = 'Änderung vorschlagen'
@@ -55,8 +53,6 @@ keywords = [
  'access point',
  'internet',
 ]
-
-DateFormat = '2000-01-30'
 
 [en.params.editPost]
 URL = 'https://github.com/servedsmart/servedsmart.com/content'
