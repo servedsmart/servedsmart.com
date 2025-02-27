@@ -1,11 +1,17 @@
 [[main]]
-identifier = 'angebot'
-name = 'Angebot'
-url = '/services/'
+identifier = 'dienstleistungen'
+name = 'Dienstleistungen'
+pageRef = '/services/'
 weight = 10
+
+[[main]]
+identifier = 'beiträge'
+name = 'Beiträge'
+pageRef = '/posts/'
+weight = 20
 
 [[main]]
 identifier = 'impressum'
 name = 'Impressum'
-url = '/about-us/'
-weight = 20
+pageRef = '/about-us/'
+weight = 90
