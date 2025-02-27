@@ -1,17 +1,17 @@
 [[main]]
 identifier = 'dienstleistungen'
 name = 'Dienstleistungen'
-pageRef = '/services/'
+pageRef = '/pages/services/'
 weight = 10
 
 [[main]]
 identifier = 'beiträge'
 name = 'Beiträge'
-pageRef = '/posts/'
+pageRef = '/pages/posts/'
 weight = 20
 
 [[main]]
 identifier = 'impressum'
 name = 'Impressum'
-pageRef = '/about-us/'
+pageRef = '/pages/about-us/'
 weight = 90

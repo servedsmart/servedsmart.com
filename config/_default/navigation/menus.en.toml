@@ -1,17 +1,17 @@
 [[main]]
 identifier = 'services'
 name = 'Services'
-pageRef = '/services/'
+pageRef = '/pages/services/'
 weight = 10
 
 [[main]]
 identifier = 'posts'
 name = 'Posts'
-pageRef = '/posts/'
+pageRef = '/pages/posts/'
 weight = 20
 
 [[main]]
 identifier = 'about us'
 name = 'About Us'
-pageRef = '/about-us/'
+pageRef = '/pages/about-us/'
 weight = 90
