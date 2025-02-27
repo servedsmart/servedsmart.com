@@ -1,0 +1,11 @@
+[[main]]
+identifier = 'services'
+name = 'Services'
+url = '/services/'
+weight = 10
+
+[[main]]
+identifier = 'about us'
+name = 'About Us'
+url = '/about-us/'
+weight = 20

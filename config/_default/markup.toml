@@ -1,0 +1,8 @@
+# See: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+[highlight]
+style = 'monokai'
+noClasses = false
+guessSyntax = true
+codeFences = true
+lineNos = false
+anchorLineNos = false

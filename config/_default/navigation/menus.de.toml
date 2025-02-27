@@ -1,0 +1,11 @@
+[[main]]
+identifier = 'angebot'
+name = 'Angebot'
+url = '/services/'
+weight = 10
+
+[[main]]
+identifier = 'impressum'
+name = 'Impressum'
+url = '/about-us/'
+weight = 20

@@ -1,0 +1,18 @@
+baseURL = 'https://servedsmart.com/'
+title = 'Served Smart'
+
+#languageCode = 'en-us'
+defaultContentLanguage = 'de'
+defaultContentLanguageInSubdir = true
+
+paginate = 5
+theme = 'PaperMod'
+
+enableRobotsTXT = true
+
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+# See: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses = true

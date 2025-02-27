@@ -1,0 +1,64 @@
+[de]
+contentDir = 'content/de'
+disabled = false
+languageCode = 'de-DE'
+languageDirection = 'ltr'
+languageName = 'Deutsch'
+title = 'Served Smart'
+weight = 1
+
+[de.params]
+title = 'Served Smart'
+subtitle = 'Digitalisierung für Ihr Heimnetzwerk'
+description = 'Nehmen Sie die Digitalisierung selbst in die Hand - einfach und unkompliziert! Für Kunden in Berlin, Deutschland.'
+keywords = [
+ 'smart home',
+ 'home assistant',
+ 'heimnetzwerk',
+ 'netzwerk',
+ 'digitalisierung',
+ 'iot',
+ 'router',
+ 'access point',
+ 'internet',
+]
+
+DateFormat = '2000-01-30'
+
+[de.params.editPost]
+URL = 'https://github.com/servedsmart/servedsmart.com/content'
+Text = 'Änderung vorschlagen'
+appendFilePath = true
+
+[en]
+contentDir = 'content/en'
+disabled = false
+languageCode = 'en-US'
+languageDirection = 'ltr'
+languageName = 'English'
+title = 'Served Smart'
+weight = 2
+
+[en.params]
+title = 'Served Smart'
+subtitle = 'Making your home smarter'
+description = 'We will transform your home into a smart home - easy and stress-free! Services available in Berlin, Germany.'
+keywords = [
+ 'smart home',
+ 'home assistant',
+ 'home network',
+ 'network',
+ 'digitization',
+ 'internet of things',
+ 'iot',
+ 'router',
+ 'access point',
+ 'internet',
+]
+
+DateFormat = '2000-01-30'
+
+[en.params.editPost]
+URL = 'https://github.com/servedsmart/servedsmart.com/content'
+Text = 'Suggest Changes'
+appendFilePath = true

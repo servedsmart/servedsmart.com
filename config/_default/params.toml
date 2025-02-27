@@ -1,0 +1,106 @@
+# to enable google analytics, opengraph, twitter-cards and schema
+#env = 'production'
+title = 'Served Smart'
+subtitle = 'Making your home smarter'
+description = 'We will transform your home into a smart home - easy and stress-free! Services available in Berlin, Germany.'
+keywords = [
+ 'smart home',
+ 'home assistant',
+ 'home network',
+ 'network',
+ 'digitization',
+ 'internet of things',
+ 'iot',
+ 'router',
+ 'access point',
+ 'internet',
+]
+author = 'Leopold Johannes Meinel'
+#images = [ '<link or path of image for opengraph, twitter-cards>' ]
+
+DateFormat = '2000-01-30'
+defaultTheme = 'auto'
+disableThemeToggle = false
+
+ShowReadingTime = true
+ShowShareButtons = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+ShowWordCount = true
+ShowRssButtonInSectionTermList = true
+
+UseHugoToc = true
+showtoc = false
+tocopen = false
+disableSpecial1stPost = false
+disableScrollToTop = false
+comments = false
+hidemeta = false
+hideSummary = false
+
+[assets]
+disableHLJS = true
+disableFingerprinting = true
+#favicon = '<link / abs url>'
+#favicon16x16 = '<link / abs url>'
+#favicon32x32 = '<link / abs url>'
+#apple_touch_icon = '<link / abs url>'
+#safari_pinned_tab = '<link / abs url>'
+
+#[label]
+#text = 'Home'
+#icon = '/apple-touch-icon.png'
+#iconHeight = 35
+
+#[profileMode]
+#enabled = false
+#title = 'ExampleSite'
+#subtitle = 'This is subtitle'
+#imageUrl = '<img location>'
+#imageWidth = 120
+#imageHeight = 120
+#imageTitle = 'my image'
+
+#[[profileMode.buttons]]
+#name = 'Posts'
+#url = 'posts'
+#[[profileMode.buttons]]
+#name = 'Tags'
+#url = 'tags'
+
+#[homeInfoParams]
+#Title = 'Hi there 👋'
+#Content = 'Welcome to my blog'
+
+[[socialIcons]]
+name = 'github'
+url = 'https://github.com/servedsmart'
+
+#[analytics.google]
+#SiteVerificationTag = 'XYZabc'
+
+[cover]
+# hide everywhere but not in structured data
+hidden = true
+# hide on list pages and home  
+hiddenInList = true
+# hide on single page 
+hiddenInSingle = true
+
+[editPost]
+URL = 'https://github.com/servedsmart/servedsmart.com/content'
+Text = 'Suggest Changes'
+appendFilePath = true
+
+# See: https://fusejs.io/api/options.html
+[fuseOpts]
+isCaseSensitive = false
+shouldSort = true
+location = 0
+distance = 1000
+threshold = 0.4
+minMatchCharLength = 0
+# See: https://www.fusejs.io/api/methods.html#search
+limit = 10
+keys = ['title', 'permalink', 'summary', 'content']
