@@ -5,7 +5,7 @@ title = 'Served Smart'
 defaultContentLanguage = 'de'
 defaultContentLanguageInSubdir = true
 
-paginate = 5
+pagination.pagerSize = 5
 theme = 'PaperMod'
 
 enableRobotsTXT = true
