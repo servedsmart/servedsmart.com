@@ -89,7 +89,7 @@ hiddenInList = true
 hiddenInSingle = true
 
 [editPost]
-URL = 'https://github.com/servedsmart/servedsmart.com/content'
+URL = 'https://github.com/servedsmart/servedsmart.com/tree/main/content/'
 Text = 'Suggest Changes'
 appendFilePath = true
 
