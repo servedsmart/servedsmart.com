@@ -7,7 +7,7 @@ weight = 10
 [[main]]
 identifier = 'posts'
 name = 'Posts'
-pageRef = '/pages/posts/'
+pageRef = '/'
 weight = 20
 
 [[main]]

@@ -7,7 +7,7 @@ weight = 10
 [[main]]
 identifier = 'beiträge'
 name = 'Beiträge'
-pageRef = '/pages/posts/'
+pageRef = '/'
 weight = 20
 
 [[main]]
