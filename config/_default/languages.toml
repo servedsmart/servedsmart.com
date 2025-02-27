@@ -24,7 +24,7 @@ keywords = [
 ]
 
 [de.params.editPost]
-URL = 'https://github.com/servedsmart/servedsmart.com/tree/main/content/'
+URL = 'https://github.com/servedsmart/servedsmart.com/tree/main/content/de/'
 Text = 'Änderung vorschlagen'
 appendFilePath = true
 
@@ -55,6 +55,6 @@ keywords = [
 ]
 
 [en.params.editPost]
-URL = 'https://github.com/servedsmart/servedsmart.com/tree/main/content/'
+URL = 'https://github.com/servedsmart/servedsmart.com/tree/main/content/en/'
 Text = 'Suggest Changes'
 appendFilePath = true
