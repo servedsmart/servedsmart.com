@@ -21,12 +21,12 @@ author = 'Leopold Johannes Meinel'
 defaultTheme = 'auto'
 disableThemeToggle = false
 
-ShowReadingTime = true
+ShowReadingTime = false
 ShowShareButtons = true
-ShowPostNavLinks = true
+ShowPostNavLinks = false
 ShowBreadCrumbs = true
 ShowCodeCopyButtons = true
-ShowWordCount = true
+ShowWordCount = false
 ShowRssButtonInSectionTermList = true
 
 UseHugoToc = true
