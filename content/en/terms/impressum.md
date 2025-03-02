@@ -1,9 +1,9 @@
 +++
 date = '2025-03-02T22:04:49+01:00'
 lastmod = '2025-03-02T22:04:49+01:00'
-title = 'Impressum'
-description = 'Impressum'
-summary = 'Impressum'
+title = 'Legal Disclosure'
+description = 'Legal Disclosure'
+summary = 'Legal Disclosure'
 layout = 'single'
 ShowShareButtons = false
 # Categories are generally used for broader, top-level topics.
@@ -14,7 +14,7 @@ tags = []
 keywords = []
 +++
 
-# Angaben gemäß §§ 5, 6 DDG
+# Information according to §§ 5, 6 DDG
 
 REPLACE_ME_COMPANY_NAME
 
@@ -22,34 +22,36 @@ REPLACE_ME_STREET_NAME REPLACE_ME_STREET_NUMBER
 
 REPLACE_ME_POSTAL_CODE, REPLACE_ME_CITY
 
-**Vertreten durch:** Leopold Johannes Meinel
+**Represented by:** Leopold Johannes Meinel
 
-**Verantwortlicher im Sinne des § 18 MStV:** Leopold Johannes Meinel
+**Responsible in accordance with § 18 MStV:** Leopold Johannes Meinel
 
-## Kontaktdaten
+## Contact
 
-**Telefon:** REPLACE_ME_TELEPHONE
+**Telephone:** REPLACE_ME_TELEPHONE
 
 **E-Mail:** REPLACE_ME_EMAIL
 
-## Umsatzsteuer-ID
+## VAT-ID
 
-**Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:** REPLACE_ME_UMSATZSTEUER_ID
+**VAT-ID in accordance with § 27 a UStG:** REPLACE_ME_UMSATZSTEUER_ID
 
-# Haftung für Inhalte
+# Disclaimer
 
-Als Diensteanbieter sind wir für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach Artikel 8 DSA sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+# Liability for content
 
-Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
+As a service provider, we are responsible for our own content on these pages in accordance with general laws. According to Article 8 DSA, however, we as a service provider are not obliged to monitor transmitted or stored third-party information or to research circumstances that indicate illegal activity.
 
-# Haftungsbeschränkung für externe Links
+Obligations to remove or block the use of information according to general laws remain unaffected. However, liability in this regard is only possible from the time of knowledge of a specific violation of the law. If we become aware of any legal violations, we will remove this content immediately.
 
-Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.
+# Liability for links
 
-Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
+Our website contains links to external websites of third parties, the content of which we have no influence on. Therefore, we cannot accept any liability for this external content. The respective provider or operator of the pages is always responsible for the content of the linked pages. The linked pages were checked for possible legal violations at the time the link was created. No illegal content was discernible at the time of linking.
 
-# Urheberrecht
+A permanent control of the content of the linked pages is not reasonable without concrete evidence of a violation of the law. If legal violations become known, we will remove such links immediately.
 
-Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.
+# Copyright
 
-Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
+The content and works on these pages created by the site operator are subject to German copyright law. The duplication, processing, distribution and any kind of use outside the limits of copyright law require the written consent of the respective author or Creator. Downloads and copies of this page are only permitted for private, non-commercial use.
+
+If the content on this page was not created by the operator, the copyrights of third parties are observed. In particular, third party content is marked as such. Should you nevertheless become aware of a copyright infringement, please let us know. If we become aware of legal violations, we will remove such content immediately.
