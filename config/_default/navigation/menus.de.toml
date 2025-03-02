@@ -5,7 +5,13 @@ pageRef = '/pages/services/'
 weight = 10
 
 [[main]]
+identifier = 'beiträge'
+name = 'Beiträge'
+pageRef = '/posts/'
+weight = 20
+
+[[main]]
 identifier = 'impressum'
 name = 'Impressum'
-pageRef = '/pages/about-us/'
+pageRef = '/pages/impressum/'
 weight = 90
