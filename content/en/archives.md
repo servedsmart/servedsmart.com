@@ -1,7 +1,8 @@
----
++++
 # See: https://github.com/adityatelange/hugo-PaperMod/wiki/Features#archives-layout
-title: "Archive"
-layout: "archives"
-url: "/archives/"
-summary: "archives"
----
+title = 'Archives'
+description = 'Archives'
+summary = 'Archives'
+layout = 'archives'
+ShowShareButtons = false
++++

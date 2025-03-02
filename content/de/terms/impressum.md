@@ -1,7 +1,17 @@
 +++
-date = '2025-02-27T22:09:47+01:00'
-draft = false
-title = 'About Us'
+date = '2025-03-02T22:04:39+01:00'
+lastmod = '2025-03-02T22:04:39+01:00'
+title = 'Impressum'
+description = 'Impressum'
+summary = 'Impressum'
+layout = 'single'
+ShowShareButtons = false
+# Categories are generally used for broader, top-level topics.
+categories = []
+# Tags are used for more specific, detailed topics.
+tags = []
+# Keywords are used for metadata and SEO purposes.
+keywords = []
 +++
 
 # Angaben gemäß §§ 5, 6 DDG

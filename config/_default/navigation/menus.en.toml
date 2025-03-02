@@ -7,23 +7,17 @@ weight = 10
 [[main]]
 identifier = 'services'
 name = 'Services'
-pageRef = '/posts/services/'
-weight = 10
+pageRef = '/services/'
+weight = 20
 
 [[main]]
 identifier = 'posts'
 name = 'Posts'
 pageRef = '/posts/'
-weight = 20
-
-[[main]]
-identifier = 'archives'
-name = 'Archives'
-pageRef = '/archives/'
 weight = 30
 
 [[main]]
 identifier = 'legal disclosure'
 name = 'Legal Disclosure'
-pageRef = '/pages/impressum/'
+pageRef = '/terms/impressum/'
 weight = 90

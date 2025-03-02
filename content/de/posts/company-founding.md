@@ -1,9 +1,9 @@
 +++
-date = '{{ .Date }}'
-lastmod = '{{ .Date }}'
-title = '{{ replace .File.ContentBaseName "-" " " | title }}'
-description = '{{ replace .File.ContentBaseName "-" " " | title }}'
-summary = '{{ replace .File.ContentBaseName "-" " " | title }}'
+date = '2025-03-02T22:35:56+01:00'
+lastmod = '2025-03-02T22:35:56+01:00'
+title = 'Geschäftsgründung'
+description = 'Geschäftsgründung'
+summary = 'Geschäftsgründung'
 layout = 'single'
 ShowShareButtons = true
 # Categories are generally used for broader, top-level topics.

@@ -5,25 +5,19 @@ pageRef = '/search/'
 weight = 10
 
 [[main]]
-identifier = 'dienstleistungen'
-name = 'Dienstleistungen'
-pageRef = '/posts/services/'
-weight = 10
-
-[[main]]
-identifier = 'beiträge'
-name = 'Beiträge'
-pageRef = '/posts/'
+identifier = 'services'
+name = 'Services'
+pageRef = '/services/'
 weight = 20
 
 [[main]]
-identifier = 'archiv'
-name = 'Archiv'
-pageRef = '/archives/'
+identifier = 'posts'
+name = 'Posts'
+pageRef = '/posts/'
 weight = 30
 
 [[main]]
 identifier = 'impressum'
 name = 'Impressum'
-pageRef = '/pages/impressum/'
+pageRef = '/terms/impressum/'
 weight = 90
