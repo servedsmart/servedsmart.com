@@ -1,7 +1,13 @@
 [[main]]
+identifier = 'suche'
+name = 'Suche'
+pageRef = '/search/'
+weight = 10
+
+[[main]]
 identifier = 'dienstleistungen'
 name = 'Dienstleistungen'
-pageRef = '/pages/services/'
+pageRef = '/posts/services/'
 weight = 10
 
 [[main]]
@@ -9,6 +15,12 @@ identifier = 'beiträge'
 name = 'Beiträge'
 pageRef = '/posts/'
 weight = 20
+
+[[main]]
+identifier = 'archiv'
+name = 'Archiv'
+pageRef = '/archives/'
+weight = 30
 
 [[main]]
 identifier = 'impressum'
