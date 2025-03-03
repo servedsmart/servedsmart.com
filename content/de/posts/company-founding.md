@@ -1,9 +1,9 @@
 +++
 date = '2025-03-02T22:35:56+01:00'
 lastmod = '2025-03-02T22:35:56+01:00'
-title = 'Geschäftsgründung'
-description = 'Geschäftsgründung'
-summary = 'Geschäftsgründung'
+title = 'Unternehmensgründung'
+description = 'Unternehmensgründung'
+summary = 'Unternehmensgründung'
 layout = 'single'
 ShowShareButtons = true
 # Categories are generally used for broader, top-level topics.
