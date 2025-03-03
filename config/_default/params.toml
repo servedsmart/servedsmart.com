@@ -76,6 +76,7 @@ disableFingerprinting = true
 name = 'github'
 url = 'https://github.com/servedsmart'
 
+# NOTE: If ever adding this, cookie consent is required!; see: https://hugocodex.org/add-ons/cookie-consent/
 #[analytics.google]
 #SiteVerificationTag = 'XYZabc'
 
