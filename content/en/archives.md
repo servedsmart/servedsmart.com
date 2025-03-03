@@ -4,5 +4,4 @@ title = 'Archives'
 description = 'Archives'
 summary = 'Archives'
 layout = 'archives'
-ShowShareButtons = false
 +++

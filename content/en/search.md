@@ -4,6 +4,5 @@ title = 'Search'
 description = 'Search'
 summary = 'Search'
 layout = 'search'
-ShowShareButtons = false
 placeholder = 'Search'
 +++

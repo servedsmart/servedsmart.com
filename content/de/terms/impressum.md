@@ -5,7 +5,6 @@ title = 'Impressum'
 description = 'Impressum'
 summary = 'Impressum'
 layout = 'single'
-ShowShareButtons = false
 # Categories are generally used for broader, top-level topics.
 categories = []
 # Tags are used for more specific, detailed topics.

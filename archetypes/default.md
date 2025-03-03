@@ -5,7 +5,6 @@ title = '{{ replace .File.ContentBaseName "-" " " | title }}'
 description = '{{ replace .File.ContentBaseName "-" " " | title }}'
 summary = '{{ replace .File.ContentBaseName "-" " " | title }}'
 layout = 'single'
-ShowShareButtons = true
 # Categories are generally used for broader, top-level topics.
 categories = []
 # Tags are used for more specific, detailed topics.
