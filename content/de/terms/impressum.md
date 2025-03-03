@@ -1,6 +1,5 @@
 +++
 date = '2025-03-02T22:04:39+01:00'
-lastmod = '2025-03-02T22:04:39+01:00'
 title = 'Impressum'
 description = 'Impressum'
 summary = 'Impressum'

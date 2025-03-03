@@ -1,6 +1,5 @@
 +++
 date = '2025-03-02T22:03:30+01:00'
-lastmod = '2025-03-02T22:03:30+01:00'
 title = 'Smart Home'
 description = 'Smart Home'
 summary = 'Smart Home'

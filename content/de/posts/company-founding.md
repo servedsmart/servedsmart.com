@@ -1,6 +1,5 @@
 +++
 date = '2025-03-02T22:35:56+01:00'
-lastmod = '2025-03-02T22:35:56+01:00'
 title = 'Unternehmensgründung'
 description = 'Unternehmensgründung'
 summary = 'Unternehmensgründung'
