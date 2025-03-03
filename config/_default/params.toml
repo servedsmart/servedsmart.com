@@ -1,5 +1,5 @@
 # to enable google analytics, opengraph, twitter-cards and schema
-#env = 'production'
+env = 'production'
 title = 'Served Smart'
 subtitle = 'Making your home smarter'
 description = 'We will transform your home into a smart home - easy and stress-free! Services available in Berlin, Germany.'
