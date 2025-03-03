@@ -20,6 +20,7 @@ author = 'Leopold Johannes Meinel'
 
 defaultTheme = 'auto'
 disableThemeToggle = false
+DateFormat = 'Jan 02, 2006'
 time.Format = 'Jan 02, 2006 15:04'
 
 ShowReadingTime = false
