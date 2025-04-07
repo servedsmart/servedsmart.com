@@ -1,5 +1,4 @@
 disabled = false
-contentDir = 'content/de'
 languageCode = "de"
 languageName = "Deutsch"
 weight = 10
@@ -21,7 +20,7 @@ email = "info@servedsmart.com"
 #   image = "img/blowfish_logo.png"
 #   imageQuality = 96
 headline = "Hobby-Coder mit großer Begeisterung für IT"
-bio = "Hallo! Ich bin Leo, ein Hobby-Coder aus Berlin. Mich begeistert self/on-premise hosting, bei dem man IT-Dienstleistungen aus der Cloud nimmt. Statische Websites zu erstellen oder Netzwerke aufzusetzen sind auch interessante Aufgaben für mich. Außerdem habe ich grundlegende Kenntnisse in verschiedenen Programmiersprachen, habe diese allerdings nie professionell genutzt."
+bio = "Begeistert von self/on-premise hosting, dem Erstellen von statischen Websites, Coden und dem Einreichten von Netzwerken."
 links = [
  { email = "mailto:info@servedsmart.com" },
  #     { link = "https://link-to-some-website.com/" },

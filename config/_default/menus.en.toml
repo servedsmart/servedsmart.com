@@ -79,11 +79,11 @@ pageRef = '/posts/'
 weight = 50
 
 [[main]]
-name = 'Privacy Policy'
+name = 'Privacy'
 pageRef = '/terms/privacy-policy/'
 weight = 90
 
 [[main]]
-name = 'Legal Disclosure'
+name = 'Legal'
 pageRef = '/terms/impressum/'
 weight = 91

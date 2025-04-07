@@ -80,7 +80,7 @@ weight = 50
 
 [[main]]
 name = 'Datenschutz'
-pageRef = '/terms/datenschutz/'
+pageRef = '/terms/privacy-policy/'
 weight = 90
 
 [[main]]

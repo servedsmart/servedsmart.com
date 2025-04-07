@@ -9,10 +9,4 @@ categories = []
 tags = []
 # Remove this to publish.
 draft =true
-# External URL specific parameters
-externalUrl = ""
-showReadingTime = false
-[_build]
-render = "false"
-list = "local"
 +++

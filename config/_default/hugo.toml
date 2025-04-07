@@ -6,7 +6,6 @@ theme = "blowfish" # UNCOMMENT THIS LINE
 baseURL = 'https://servedsmart.com/'
 languageCode = "de"
 defaultContentLanguage = "de"
-defaultContentLanguageInSubdir = true
 
 # pluralizeListTitles = "true" # hugo function useful for non-english languages, find out more in  https://gohugo.io/getting-started/configuration/#pluralizelisttitles
 
