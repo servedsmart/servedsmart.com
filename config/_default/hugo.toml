@@ -6,7 +6,7 @@ defaultContentLanguage = 'de'
 defaultContentLanguageInSubdir = true
 
 pagination.pagerSize = 5
-theme = 'PaperMod'
+theme = 'beautifulhugo'
 
 enableRobotsTXT = true
 
