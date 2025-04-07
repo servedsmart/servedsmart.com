@@ -25,7 +25,7 @@ disableTextInHeader = false
 # defaultFeaturedImage = "IMAGE.jpg" # used as default for featured images in all articles
 
 highlightCurrentMenuArea = true
-smartTOC = true
+smartTOC = false
 smartTOCHideUnfocusedChildren = false
 
 giteaDefaultServer = ""
