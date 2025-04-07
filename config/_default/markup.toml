@@ -1,8 +1,13 @@
-# See: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+# -- Markup --
+# These settings are required for the theme to function.
+
+[goldmark]
+[goldmark.renderer]
+unsafe = true
+
 [highlight]
-style = 'monokai'
 noClasses = false
-guessSyntax = true
-codeFences = true
-lineNos = false
-anchorLineNos = false
+
+[tableOfContents]
+startLevel = 2
+endLevel = 4
