@@ -79,11 +79,18 @@ pageRef = '/services/'
 weight = 20
 
 [[main]]
-name = 'Datenschutz'
-pageRef = '/terms/privacy-policy/'
-weight = 90
+name = 'Bedingungen'
+pageRef = '/terms/'
+weight = 80
 
 [[main]]
 name = 'Impressum'
+parent = "Bedingungen"
 pageRef = '/terms/impressum/'
-weight = 91
+weight = 81
+
+[[main]]
+name = 'Datenschutzerklärung'
+parent = "Bedingungen"
+pageRef = '/terms/privacy-policy/'
+weight = 82
