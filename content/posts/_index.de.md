@@ -1,8 +1,8 @@
 ---
-title: "Posts"
-description: "Sehen Sie aktuelle Posts unseres Unternehmens."
+title: "Beiträge"
+description: "Sehen Sie aktuelle Beiträge unseres Unternehmens."
 cascade:
   showReadingTime: false
 ---
 
-In diesem Bereich können Sie Posts mit Neuigkeiten zu unserem Unternehmen finden.
+In diesem Bereich können Sie Beiträge mit Neuigkeiten zu unserem Unternehmen finden.

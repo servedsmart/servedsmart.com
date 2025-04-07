@@ -69,12 +69,12 @@
 #   weight = 20
 
 [[main]]
-name = 'Services'
+name = 'Dienstleistungen'
 pageRef = '/services/'
 weight = 10
 
 [[main]]
-name = 'Posts'
+name = 'Beiträge'
 pageRef = '/posts/'
 weight = 50
 
