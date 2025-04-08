@@ -4,4 +4,5 @@ description: "Nehmen Sie die Digitalisierung selbst in die Hand - einfach und un
 ---
 
 Nehmen Sie die Digitalisierung selbst in die Hand - einfach und unkompliziert!
+
 Für Kunden in Berlin.
