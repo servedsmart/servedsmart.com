@@ -23,7 +23,7 @@ tags = [
  'statische websites',
  'themes',
  'website design',
- 'unternehmensnetzwerk'
+ 'unternehmensnetzwerk',
  'heimnetzwerk',
  'backup',
  'nat',

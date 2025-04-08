@@ -21,7 +21,7 @@ tags = [
  'static websites',
  'themes',
  'website design',
- 'business networking'
+ 'business networking',
  'home networking',
  'backup',
  'nat',
