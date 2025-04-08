@@ -9,6 +9,7 @@ categories = [
  'heimkunden',
  'iot',
  'smart home',
+ 'dienstleistung',
 ]
 # Tags are used for more specific, detailed topics.
 tags = [

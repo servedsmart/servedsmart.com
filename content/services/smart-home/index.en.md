@@ -10,6 +10,7 @@ categories = [
  'iot',
  'networking',
  'smart home',
+ 'service',
 ]
 # Tags are used for more specific, detailed topics.
 tags = [

@@ -1,21 +1,22 @@
 +++
-title = "Statische Website"
-date = '2025-04-08T11:14:34+02:00'
-description = "Static Website"
-summary = "Static Website"
+title = "Netzwerktechnik"
+date = '2025-04-08T12:13:42+02:00'
+description = "Netzwerktechnik"
+summary = "Netzwerktechnik"
 # Categories are generally used for broader, top-level topics.
 categories = [
  'digitalisierung',
  'unternehmen',
  'heimkunden',
- 'website',
+ 'netzwerk',
  'dienstleistung',
 ]
 # Tags are used for more specific, detailed topics.
 tags = [
- 'hugo',
- 'internetauftritt',
- 'statische website',
- 'website design',
+ 'access point',
+ 'glasfaser',
+ 'router',
+ 'wifi',
+ 'wlan',
 ]
 +++
