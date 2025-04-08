@@ -9,9 +9,7 @@ categories = [
  'rechtliches',
 ]
 # Tags are used for more specific, detailed topics.
-tags = [
- 'bedingungen',
-]
+tags = []
 [cascade]
 showReadingTime = false
 +++

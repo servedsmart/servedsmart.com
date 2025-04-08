@@ -5,16 +5,10 @@ description = "See recent posts about Served Smart."
 summary = "See recent posts about Served Smart."
 # Categories are generally used for broader, top-level topics.
 categories = [
- 'digitization',
- 'business',
- 'home',
- 'internal',
- 'legal',
-]
-# Tags are used for more specific, detailed topics.
-tags = [
  'announcement',
 ]
+# Tags are used for more specific, detailed topics.
+tags = []
 [cascade]
 showReadingTime = false
 +++

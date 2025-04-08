@@ -5,15 +5,10 @@ description = "Sehen Sie aktuelle Beiträge unseres Unternehmens."
 summary = "Sehen Sie aktuelle Beiträge unseres Unternehmens."
 # Categories are generally used for broader, top-level topics.
 categories = [
- 'digitalisierung',
- 'unternehmen',
- 'heimkunden',
- 'unternehmensintern',
-]
-# Tags are used for more specific, detailed topics.
-tags = [
  'ankündigung',
 ]
+# Tags are used for more specific, detailed topics.
+tags = []
 [cascade]
 showReadingTime = false
 +++

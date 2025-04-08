@@ -9,9 +9,7 @@ categories = [
  'legal',
 ]
 # Tags are used for more specific, detailed topics.
-tags = [
- 'terms',
-]
+tags = []
 [cascade]
 showReadingTime = false
 +++

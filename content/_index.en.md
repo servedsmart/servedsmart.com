@@ -16,31 +16,10 @@ categories = [
 ]
 # Tags are used for more specific, detailed topics.
 tags = [
- 'hugo',
- 'internet appearance',
- 'static websites',
- 'themes',
+ 'static website',
  'website design',
- 'business networking',
- 'home networking',
- 'backup',
- 'nat',
  'home assistant',
- 'internet of things',
  'access point',
- 'fibre',
- 'internet',
- 'router',
- 'wifi',
- 'wired networking',
- 'zigbee',
- 'energy',
- 'lighting',
- 'plants',
- 'solar',
- 'linux',
- 'mac',
- 'windows',
  'maintenance',
 ]
 [cascade]

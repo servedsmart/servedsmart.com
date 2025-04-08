@@ -8,21 +8,11 @@ categories = [
  'digitalisierung',
  'heimkunden',
  'iot',
- 'netzwerke',
  'smart home',
 ]
 # Tags are used for more specific, detailed topics.
 tags = [
- 'heimnetzwerk',
  'home assistant',
- 'internet of things',
- 'access point',
- 'glasfaser',
- 'internet',
- 'router',
- 'wifi',
- 'wlan',
- 'kabelnetzwerk',
  'zigbee',
  'energie',
  'licht',

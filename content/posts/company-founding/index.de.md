@@ -6,9 +6,8 @@ summary = 'Unternehmensgründung'
 # Categories are generally used for broader, top-level topics.
 categories = [
  'unternehmensintern',
-]
-# Tags are used for more specific, detailed topics.
-tags = [
  'ankündigung',
 ]
+# Tags are used for more specific, detailed topics.
+tags = []
 +++

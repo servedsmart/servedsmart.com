@@ -6,9 +6,8 @@ summary = 'Company Founding'
 # Categories are generally used for broader, top-level topics.
 categories = [
  'internal',
-]
-# Tags are used for more specific, detailed topics.
-tags = [
  'announcement',
 ]
+# Tags are used for more specific, detailed topics.
+tags = []
 +++

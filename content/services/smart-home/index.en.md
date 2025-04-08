@@ -13,19 +13,11 @@ categories = [
 ]
 # Tags are used for more specific, detailed topics.
 tags = [
- 'home networking',
  'home assistant',
- 'internet of things',
- 'access point',
- 'fibre',
- 'internet',
- 'router',
- 'wifi',
- 'wired networking',
  'zigbee',
  'energy',
  'lighting',
- 'plants',
+ 'gardening',
  'solar',
 ]
 +++

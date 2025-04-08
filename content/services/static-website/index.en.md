@@ -14,8 +14,7 @@ categories = [
 tags = [
  'hugo',
  'internet appearance',
- 'static websites',
- 'themes',
+ 'static website',
  'website design',
 ]
 +++
