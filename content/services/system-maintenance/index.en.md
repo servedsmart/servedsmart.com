@@ -18,6 +18,4 @@ tags = [
  'windows',
  'maintenance',
 ]
-# Remove this to publish.
-draft = true
 +++

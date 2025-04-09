@@ -15,6 +15,4 @@ categories = [
 tags = [
  'backup',
 ]
-# Remove this to publish.
-draft = true
 +++

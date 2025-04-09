@@ -18,6 +18,4 @@ tags = [
  'router',
  'wifi',
 ]
-# Remove this to publish.
-draft = true
 +++
