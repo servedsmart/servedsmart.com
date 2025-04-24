@@ -1,0 +1,44 @@
+/*
+ * File = appearance-cookie.js
+ * Author = Leopold Meinel (leo@meinel.dev)
+ * -----
+ * Copyright (c) 2025 Leopold Meinel & contributors
+ * SPDX ID = MIT
+ * URL = https://opensource.org/licenses/MIT
+ * -----
+ */
+
+window.addEventListener("DOMContentLoaded", (event) => {
+  const switcher = document.getElementById("appearance-switcher");
+  const switcherMobile = document.getElementById("appearance-switcher-mobile");
+
+  updateMeta();
+  this.updateLogo?.(getTargetAppearance());
+
+  if (switcher) {
+    switcher.addEventListener("click", () => {
+      document.documentElement.classList.toggle("dark");
+      var targetAppearance = getTargetAppearance();
+      localStorage.setItem("appearance", targetAppearance);
+      updateMeta();
+      this.updateLogo?.(targetAppearance);
+    });
+    switcher.addEventListener("contextmenu", (event) => {
+      event.preventDefault();
+      localStorage.removeItem("appearance");
+    });
+  }
+  if (switcherMobile) {
+    switcherMobile.addEventListener("click", () => {
+      document.documentElement.classList.toggle("dark");
+      var targetAppearance = getTargetAppearance();
+      localStorage.setItem("appearance", targetAppearance);
+      updateMeta();
+      this.updateLogo?.(targetAppearance);
+    });
+    switcherMobile.addEventListener("contextmenu", (event) => {
+      event.preventDefault();
+      localStorage.removeItem("appearance");
+    });
+  }
+});
