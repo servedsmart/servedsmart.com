@@ -160,7 +160,8 @@
   </div>
 </div>
 <script>
-  const scripts = [];{{ $currentLang := $.Site.Language.Lang }} {{ $data := index $.Site.Data $currentLang "consent" "items" }}{{ range $index, $item := (where $data "is_functional" false) }}
+  const scripts = [];
+  {{ $currentLang := $.Site.Language.Lang }}{{ $data := index $.Site.Data $currentLang "consent" "items" }}{{ range $index, $item := (where $data "is_functional" false) }}
   scripts[{{ $index }}] = "/js/{{ $item.script_file }}";{{ end }}
 
   function createCookie(name,value,days) {
