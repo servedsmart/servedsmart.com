@@ -1,0 +1,5 @@
+[[items]]
+title = '{{ T "consent-item-appearance-cookie-title" }}'
+description = '{{ T "consent-item-appearance-cookie-description" }}'
+is_functional = false
+script_file = 'appearance-cookie.js'
