@@ -122,8 +122,8 @@
 </div>
 <div id="consent-overlay">
   <div>
-    {{ $currentLang := $.Site.Language.Lang }} {{ $data :=
-    .Site.Data.consent&#45;currentLang.items }} {{ range $index, $item := $data }}
+    {{ range $item := }} {{ $currentLang := $.Site.Language.Lang }} {{ $data :=
+    $.Site.Data.$currentLang.consent.items }} {{ range $index, $item := $data }}
     <div>
       <input
         type="checkbox"
@@ -149,7 +149,7 @@
       <button
         id="save-consent"
         class="btn save-consent"
-        data-consentvalue="{{ $currentLang := $.Site.Language.Lang }}{{ $data := .Site.Data.consent&#45;currentLang.items }}{{ range $index, $item := $data }}{{ if $item.is_functional}}{{ else }}0{{ end }}{{ end }}"
+        data-consentvalue="{{ $currentLang := $.Site.Language.Lang }}{{ $data := $.Site.Data.$currentLang.consent.items }}{{ range $index, $item := $data }}{{ if $item.is_functional}}{{ else }}0{{ end }}{{ end }}"
       >
         {{ T "consent-button-save-consent" }}
       </button>
@@ -160,7 +160,7 @@
   </div>
 </div>
 <script>
-  const scripts = [];{{ $currentLang := $.Site.Language.Lang }} {{ $data := $.Site.Data.consent-$currentLang.items }}{{ range $index, $item := (where $data "is_functional" false) }}
+  const scripts = [];{{ $currentLang := $.Site.Language.Lang }} {{ $data := $.Site.Data.$currentLang.consent.items }}{{ range $index, $item := (where $data "is_functional" false) }}
   scripts[{{ $index }}] = "/js/{{ $item.script_file }}";{{ end }}
 
   function createCookie(name,value,days) {
