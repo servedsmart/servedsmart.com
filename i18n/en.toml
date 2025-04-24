@@ -9,8 +9,8 @@
 ###
 
 consent-text-start = "We would like to use "
-consent-text-end = "third-party code"
-consent-text-href = " to improve the functionality of this website."
+consent-text-href = "third-party code"
+consent-text-end = " to improve the functionality of this website."
 consent-button-manage-consent = "More options"
 consent-button-deny-consent = "Reject all"
 consent-button-approve-consent = "Accept all"
