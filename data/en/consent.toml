@@ -11,5 +11,5 @@
 [[items]]
 title = 'Appearance'
 description = 'This code gives users the ability to switch between a dark and a light website theme.'
-is_functional = false
+is_functional = true
 script_file = 'appearance-cookie.js'
