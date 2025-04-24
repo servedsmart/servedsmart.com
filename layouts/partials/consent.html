@@ -122,7 +122,7 @@
 </div>
 <div id="consent-overlay">
   <div>
-    {{ range $item := }} {{ $currentLang := $.Site.Language.Lang }} {{ $data :=
+    {{ $currentLang := $.Site.Language.Lang }} {{ $data :=
     $.Site.Data.$currentLang.consent.items }} {{ range $index, $item := $data }}
     <div>
       <input
@@ -276,7 +276,8 @@
   });
 </script>
 
-{{ range $index, $item := .Site.Data.consent.items }} {{ if $item.is_functional
-}}
+{{ $currentLang := $.Site.Language.Lang }} {{ $data :=
+$.Site.Data.$currentLang.consent.items }} {{ range $index, $item := $data }} {{
+if $item.is_functional}}
 <script type="text/javascript" src="/js/{{ $item.script_file }}"></script>
 {{ end }} {{ end }}
