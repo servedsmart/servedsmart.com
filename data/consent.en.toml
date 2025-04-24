@@ -1,0 +1,15 @@
+###
+# File = consent copy.toml
+# Author = Leopold Meinel (leo@meinel.dev)
+# -----
+# Copyright (c) 2025 Leopold Meinel & contributors
+# SPDX ID = MIT
+# URL = https://opensource.org/licenses/MIT
+# -----
+###
+
+[[items]]
+title = 'Appearance'
+description = 'This code gives users the ability to switch between a dark and a light website theme.'
+is_functional = false
+script_file = 'appearance-cookie.js'

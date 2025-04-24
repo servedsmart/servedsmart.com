@@ -122,7 +122,8 @@
 </div>
 <div id="consent-overlay">
   <div>
-    {{ range $index, $item := .Site.Data.consent.items }}
+    {{ $currentLang := $.Site.Language.Lang }} {{ $data := .Site.Data
+    "consent.items" $currentLang }} {{ range $index, $item := $data }}
     <div>
       <input
         type="checkbox"
@@ -144,10 +145,11 @@
     </div>
     {{ end }}
     <div>
+      <!-- prettier-ignore -->
       <button
         id="save-consent"
         class="btn save-consent"
-        data-consentvalue="{{ range $index, $item := .Site.Data.consent.items }}{{ if $item.is_functional}}{{ else }}0{{ end }}{{ end }}"
+        data-consentvalue="{{ $currentLang := $.Site.Language.Lang }}{{ $data := .Site.Data &quot;consent.items&quot; $currentLang }}{{ range $index, $item := $data }}{{ if $item.is_functional}}{{ else }}0{{ end }}{{ end }}"
       >
         {{ T "consent-button-save-consent" }}
       </button>
@@ -158,8 +160,7 @@
   </div>
 </div>
 <script>
-
-  const scripts = [];{{ range $index, $item := (where .Site.Data.consent.items "is_functional" false) }}
+  const scripts = [];{{ $currentLang := $.Site.Language.Lang }}{{ $data := .Site.Data "consent.items.is_functional" $currentLang }}{{ range $index, $item := (where $data false) }}
   scripts[{{ $index }}] = "/js/{{ $item.script_file }}";{{ end }}
 
   function createCookie(name,value,days) {
