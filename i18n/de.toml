@@ -1,0 +1,17 @@
+###
+# File = de.toml
+# Author = Leopold Meinel (leo@meinel.dev)
+# -----
+# Copyright (c) 2025 Leopold Meinel & contributors
+# SPDX ID = MIT
+# URL = https://opensource.org/licenses/MIT
+# -----
+###
+
+consent-text-start = "Wir würden gerne "
+consent-text-end = "Drittanbieter-Code"
+consent-text-href = " benutzen, um die Funktionalität dieser Website zu verbessern."
+consent-button-manage-consent = "Weitere Optionen"
+consent-button-deny-consent = "Alle ablehnen"
+consent-button-approve-consent = "Alle akzeptieren"
+consent-button-save-consent = "Einstellungen bestätigen"
