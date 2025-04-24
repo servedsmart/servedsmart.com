@@ -94,3 +94,7 @@ name = 'Privacy Policy'
 parent = "Terms"
 pageRef = '/terms/privacy-policy/'
 weight = 82
+
+[[footer]]
+name = "Manage consent"
+url = "#manage-consent"

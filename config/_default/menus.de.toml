@@ -94,3 +94,7 @@ name = 'Datenschutzerklärung'
 parent = "Bedingungen"
 pageRef = '/terms/privacy-policy/'
 weight = 82
+
+[[footer]]
+name = "Cookie Einstellungen"
+url = "#manage-consent"
