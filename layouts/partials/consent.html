@@ -149,7 +149,7 @@
       <button
         id="save-consent"
         class="btn save-consent"
-        data-consentvalue="{{ $currentLang := $.Site.Language.Lang }}{{ $data := .Site.Data &quot;consent.items&quot; $currentLang }}{{ range $index, $item := $data }}{{ if $item.is_functional}}{{ else }}0{{ end }}{{ end }}"
+        data-consentvalue="{{ $currentLang := $.Site.Language.Lang }}{{ $data := .Site.Data `consent.items` $currentLang }}{{ range $index, $item := $data }}{{ if $item.is_functional}}{{ else }}0{{ end }}{{ end }}"
       >
         {{ T "consent-button-save-consent" }}
       </button>
