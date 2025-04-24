@@ -1,0 +1,5 @@
+[[items]]
+title = "Appearance"
+description = "This code gives users the ability to switch the website theme. They can select between a dark and a light theme."
+is_functional = false
+script_file = "appearance-cookie.js"
