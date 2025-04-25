@@ -12,12 +12,13 @@
 <style>
   #consent-notice {
     padding: 1rem 1rem;
+    margin: auto;
     display: none;
     text-align: center;
     position: fixed;
     bottom: 0;
-    width: calc(100% - 2rem);
-    background: rgb(var(--color-neutral-900));
+    width: 100%;
+    background: rgb(var(--color-neutral-500));
     color: rgba(var(--color-neutral), 0.8);
   }
   #consent-notice span {
@@ -30,12 +31,13 @@
   }
   #consent-notice span a {
     color: inherit;
-    text-decoration: underline;
+    text-decoration: rgb(var(--color-primary-500));
     text-decoration-color: rgba(var(--color-neutral), 0.5);
   }
   #consent-notice button.btn {
+    border-radius: 50%;
     margin-left: 0.5rem;
-    background: rgba(var(--color-neutral), 0.1);
+    background: rgba(var(--color-neutral-300), 0.6);
     font-weight: normal;
   }
 
@@ -46,7 +48,7 @@
     width: 100%;
     height: 100vh;
     display: none;
-    background: rgba(var(--color-neutral-900), 0.9);
+    background: rgba(var(--color-neutral-500), 0.9);
     z-index: 999999;
     overflow: auto;
     cursor: pointer;
@@ -55,7 +57,7 @@
     display: flex;
   }
   #consent-overlay > div {
-    background: rgb(var(--color-neutral-900));
+    background: rgb(var(--color-neutral-500));
     width: 100%;
     max-width: 30rem;
     padding: 1.75rem;
@@ -71,6 +73,11 @@
     margin: 0;
   }
   #consent-overlay h3 {
+    color: rgba(var(--color-neutral), 0.8);
+    padding-top: 0;
+  }
+  #consent-overlay p {
+    color: rgba(var(--color-neutral), 0.8);
     padding-top: 0;
   }
   #consent-overlay input {
@@ -79,9 +86,10 @@
   #consent-overlay label {
     display: block;
   }
-  #consent-overlay .btn {
+  #consent-overlay button.btn {
+    border-radius: 50%;
     margin-right: 0.5rem;
-    background: rgba(var(--color-primary-500), 0.6);
+    background: rgba(var(--color-neutral-300), 0.6);
     font-weight: normal;
   }
 
