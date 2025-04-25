@@ -113,10 +113,8 @@ function modifyActiveParent(mutationsList, observer) {
   for (const mutation of mutationsList) {
     if (mutation.type === "attributes" && mutation.attributeName === "class") {
       const targetElement = mutation.target;
-      console.log(targetElement);
       // Check if active has been removed
       if (!targetElement.classList.contains("active")) {
-        console.log("if");
         // Set display of targetElement and parentEl to none and remove active attribute
         targetElement.style.display = "none";
         const parentEl = targetElement.parentElement;
@@ -124,16 +122,19 @@ function modifyActiveParent(mutationsList, observer) {
           parentEl.classList.remove("active");
           parentEl.style.display = "none";
         }
+        observer.disconnect();
       } else {
-        console.log("else");
         // If it contains active, also add parent element active attribute
         const parentEl = targetElement.parentElement;
-        console.log(parentEl);
         parentEl.classList.add("active");
       }
     }
   }
-  observer.disconnect();
+}
+// Observe an element via MutationObserver
+function observeElement(element) {
+  const observer = new MutationObserver(modifyActiveParent);
+  observer.observe(element, { attributes: true });
 }
 
 // Load functional javascript
@@ -151,10 +152,12 @@ if (readCookie("consent-settings")) {
   loadOptionalJS(optionalScripts, consentValue);
 } else {
   document.getElementById("consent-notice").classList.add("active");
+  observeElement(document.getElementById("consent-notice"));
 }
 // Handle consent buttons
 addClickExec(document.querySelectorAll(".manage-consent"), function () {
   document.getElementById("consent-overlay").classList.add("active");
+  observeElement(document.getElementById("consent-overlay"));
 });
 addClickExec(document.querySelectorAll(".deny-consent"), function () {
   modifyAllConsent(optionalScripts, "0");
@@ -176,13 +179,5 @@ document
   });
 
 // Use MutationObserver to observe active state
-const consentNoticeObserver = new MutationObserver(modifyActiveParent);
-console.log("consentNoticeObserver");
-consentNoticeObserver.observe(document.getElementById("consent-notice"), {
-  attributes: true
-});
-const consentOverlayObserver = new MutationObserver(modifyActiveParent);
-console.log("consentOverlayObserver");
-consentOverlayObserver.observe(document.getElementById("consent-overlay"), {
-  attributes: true
-});
+observeElement(document.getElementById("consent-notice"));
+observeElement(document.getElementById("consent-overlay"));
