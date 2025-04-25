@@ -20,15 +20,16 @@
     align-items: flex-end;
     padding: 15px;
   }
-  .consent-notice {
+  #consent-notice {
     background: rgba(var(--color-neutral-700), 0.9);
     color: rgb(var(--color-neutral));
     padding: 25px;
     border-radius: 25px;
+    display: block;
     text-align: center;
     box-sizing: border-box;
   }
-  .consent-notice button.btn {
+  #consent-notice button.btn {
     text-decoration: none;
     background: rgba(var(--color-secondary-500), 0.5);
     cursor: pointer;
@@ -40,16 +41,16 @@
     border-radius: 50px;
     box-sizing: border-box;
   }
-  .consent-notice button.btn:hover {
+  #consent-notice button.btn:hover {
     color: rgba(var(--color-neutral), 0.5);
   }
-  .consent-notice span {
+  #consent-notice span {
     margin-right: 1rem;
   }
-  .consent-notice span a {
+  #consent-notice span a {
     text-decoration: underline;
   }
-  .consent-notice span a:hover {
+  #consent-notice span a:hover {
     color: rgba(var(--color-neutral), 0.5);
   }
 
@@ -106,19 +107,19 @@
     #consent-overlay > div {
       padding: 1.75rem 1rem;
     }
-    .consent-notice span {
+    #consent-notice span {
       display: block;
       padding-top: 3px;
       margin-bottom: 1.5rem;
     }
-    .consent-notice button.btn {
+    #consent-notice button.btn {
       position: relative;
       bottom: 4px;
     }
   }
 </style>
 <div id="consent-notice-container">
-  <div class="consent-notice">
+  <div id="consent-notice">
     <span
       >{{ T "consent-text-start" }}<a
         class="manage-consent"
@@ -218,6 +219,7 @@
   function acceptSomeConsentScripts(consentValue) {
       setConsentInputs(consentValue);
       createCookie('consent-settings',consentValue,31);
+      document.getElementById('consent-notice-container').style.display = 'none';
       document.getElementById('consent-notice').style.display = 'none';
       document.getElementById('consent-overlay').classList.remove('active');
       loadConsentScripts(consentValue);
@@ -261,7 +263,8 @@
       setConsentInputs(consentValue);
       loadConsentScripts(consentValue);
   } else {
-      document.getElementById('consent-notice').style.display = 'block';
+    document.getElementById('consent-notice-container').style.display = 'flex';
+    document.getElementById('consent-notice').style.display = 'block';
   }
   var elements = document.querySelectorAll('.manage-consent');
   elements.forEach(function(el) {
