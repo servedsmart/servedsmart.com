@@ -11,22 +11,29 @@
 
 <style>
   #consent-notice-container {
+    position: fixed;
+    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    padding: 1rem 1rem;
+    box-sizing: border-box;
   }
-  #consent-notice {
+  .consent-notice {
     background: rgb(var(--color-neutral-700));
     color: rgb(var(--color-neutral));
-    float: right;
+    border-radius: 20%;
+    text-align: center;
+    line-height: 2rem;
+    /*
     display: flex;
     align-items: flex-end;
     shape-outside: inset(calc(100% - 100px) 0 0);
-    text-align: center;
+    */
   }
-  #consent-notice button {
+  .consent-notice button {
     text-decoration: none;
-    background: rgb(var(--color-secondary-500));
+    background: rgb(var(--color-secondary-700));
     color: rgb(var(--color-neutral));
     border: 1px solid #000;
     cursor: pointer;
@@ -34,30 +41,29 @@
     margin: 2px 0;
     font-weight: 700;
   }
-
-  #consent-notice button:hover {
+  .consent-notice button:hover {
     background: rgb(var(--color-neutral));
-    color: rgb(var(--color-secondary-500));
+    color: rgb(var(--color-secondary-700));
   }
-  #consent-notice span {
+  .consent-notice span {
     margin-right: 1rem;
   }
-  #consent-notice button {
+  .consent-notice button {
     display: inline-block;
     width: auto;
   }
-  #consent-notice button:hover {
+  .consent-notice button:hover {
     display: inline-block;
     width: auto;
   }
-  #consent-notice span a {
+  .consent-notice span a {
     color: inherit;
     text-decoration: rgb(var(--color-primary-500));
     text-decoration-color: rgba(var(--color-neutral), 0.5);
   }
-  #consent-notice button.btn {
-    border-radius: 50%;
-    background: rgb(var(--color-secondary-500));
+  .consent-notice button.btn {
+    border-radius: 25%;
+    background: rgb(var(--color-secondary-700));
     font-weight: normal;
   }
 
@@ -105,8 +111,8 @@
     display: block;
   }
   #consent-overlay button.btn {
-    border-radius: 50%;
-    background: rgba(var(--color-secondary-500));
+    border-radius: 25%;
+    background: rgba(var(--color-secondary-700));
     font-weight: normal;
   }
 
@@ -126,7 +132,7 @@
   }
 </style>
 <div id="consent-notice-container">
-  <div id="consent-notice">
+  <div class="consent-notice">
     <span
       >{{ T "consent-text-start" }}<a
         class="manage-consent"
