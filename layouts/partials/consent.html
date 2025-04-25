@@ -347,6 +347,7 @@
         const targetElement = mutation.target;
         // Check if active has been removed
         if (!targetElement.classList.contains("active")) {
+          console.log("if");
           // Set display of targetElement and parentDiv to none and remove active attribute
           targetElement.style.display = "none";
           const parentDiv = targetElement.closest("div");
@@ -355,6 +356,7 @@
             parentDiv.style.display = "none";
           }
         } else {
+          console.log("else");
           // If it contains active, also add parent element active attribute
           const parentDiv = targetElement.closest("div");
           parentDiv.classList.add("active");
@@ -402,10 +404,12 @@
 
   // Use MutationObserver to observe active state
   const consentNoticeObserver = new MutationObserver(modifyActiveParent);
+  console.log("consentNoticeObserver");
   consentNoticeObserver.observe(document.getElementById("consent-notice"), {
     attributes: true
   });
   const consentOverlayObserver = new MutationObserver(modifyActiveParent);
+  console.log("consentOverlayObserver");
   consentOverlayObserver.observe(document.getElementById("consent-overlay"), {
     attributes: true
   });
