@@ -119,9 +119,11 @@
   }
   #consent-overlay header {
     font-weight: var(--font-weight-bold);
+    margin-left: 1em;
   }
   #consent-overlay main {
     color: rgb(var(--color-primary-500));
+    margin-left: 1em;
   }
   #consent-overlay input {
     margin-top: 0.3rem;
@@ -202,8 +204,6 @@
     box-shadow: inset 1em 1em var(--form-control-color);
     /* Windows High Contrast Mode */
     background-color: CanvasText;
-
-    margin-right: 0.5em;
   }
   input[type="checkbox"]:checked::before {
     transform: scale(1);
@@ -253,7 +253,7 @@
           />
         </label>
         <label for="item{{ $index }}"
-          ><header><p>{{ $item.title }}</p></header>
+          ><header><h3>{{ $item.title }}</h3></header>
           <main><p>{{ $item.description }}</p></main>
         </label>
       </div>
