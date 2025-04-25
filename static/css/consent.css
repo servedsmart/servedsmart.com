@@ -19,6 +19,12 @@
   }
 }
 #consent-notice-container,
+#consent-overlay-container,
+#consent-notice,
+#consent-overlay {
+  text-decoration: none;
+}
+#consent-notice-container,
 #consent-overlay-container {
   position: fixed;
   bottom: 0;
@@ -54,7 +60,6 @@
 #consent-overlay button.btn {
   position: relative;
   color: rgb(var(--color-primary-500));
-  text-decoration: none;
   cursor: pointer;
   padding: 10px;
   margin: 10px 10px 0px 10px;
@@ -103,7 +108,6 @@
 #consent-overlay {
   position: fixed;
   background: rgba(var(--color-neutral-900), 0.9);
-  text-decoration: none;
   width: 100%;
   height: 100%;
   display: none;
