@@ -202,6 +202,8 @@
     box-shadow: inset 1em 1em var(--form-control-color);
     /* Windows High Contrast Mode */
     background-color: CanvasText;
+
+    margin-right: 0.5em;
   }
   input[type="checkbox"]:checked::before {
     transform: scale(1);
@@ -249,10 +251,10 @@
             }}checked
             disabled{{end}}
           />
-          <label for="item{{ $index }}"
-            ><header><p>{{ $item.title }}</p></header>
-            <main><p>{{ $item.description }}</p></main>
-          </label>
+        </label>
+        <label for="item{{ $index }}"
+          ><header><p>{{ $item.title }}</p></header>
+          <main><p>{{ $item.description }}</p></main>
         </label>
       </div>
       {{ end }}
