@@ -73,6 +73,12 @@
   #consent-notice-container.inactive {
     display: none;
   }
+  #consent-notice,
+  #consent-overlay > div {
+    width: 75%;
+    max-width: 60rem;
+    min-width: 10rem;
+  }
   #consent-notice {
     background: rgb(var(--color-neutral-900));
     color: rgb(var(--color-neutral));
@@ -110,10 +116,6 @@
   }
   #consent-overlay > div {
     background: rgb(var(--color-neutral-900));
-    height: fit-content;
-    width: 75%;
-    max-width: 60rem;
-    min-width: 10rem;
     padding: 25px;
   }
   #consent-overlay > div > div {
