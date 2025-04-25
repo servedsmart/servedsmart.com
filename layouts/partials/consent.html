@@ -8,7 +8,8 @@
 --URL = https://opensource.org/licenses/MIT
 -------
  -->
-{{- $style := resources.Get "/css/consent.css" | minify | fingerprint -}}
+{{- $style := resources.Get "css/consent.css" | minify | fingerprint -}}
+<link rel="stylesheet" href="{{ $style.Permalink }}" />
 
 <div id="consent-notice-container">
   <div id="consent-notice">
@@ -77,4 +78,5 @@
   {{- $currentLang := $.Site.Language.Lang -}} {{- $data := index $.Site.Data $currentLang "consent" "items" -}} {{- range $index, $item := where $data "is_functional" "eq" true -}}
   functionalScripts[{{- $index -}}] = "/js/{{- $item.script_file -}}"; {{- end -}}
 </script>
-{{- $js := resources.Get "/js/consent.js" | minify | fingerprint -}}
+{{- $js := resources.Get "js/consent.js" | minify | fingerprint -}}
+<script src="{{ $js.RelPermalink }}"></script>
