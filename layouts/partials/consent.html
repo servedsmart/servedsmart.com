@@ -8,7 +8,7 @@
 --URL = https://opensource.org/licenses/MIT
 -------
  -->
-<link rel="stylesheet" href="/css/consent.css" />
+{{ $style := resources.Get "/css/consent.css" | minify | fingerprint }}
 
 <div id="consent-notice-container">
   <div id="consent-notice">
@@ -75,6 +75,5 @@
   const functionalScripts = [];
   {{ $currentLang := $.Site.Language.Lang }} {{ $data := index $.Site.Data $currentLang "consent" "items" }} {{ range $index, $item := where $data "is_functional" "eq" true }}
   functionalScripts[{{ $index }}] = "/js/{{ $item.script_file }}"; {{ end }}
-
 </script>
-<script src="/js/consent.js"></script>
+{{ $js := resources.Get "/js/consent.js" | minify | fingerprint }}
