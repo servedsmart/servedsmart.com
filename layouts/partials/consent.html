@@ -36,7 +36,8 @@
     display: none;
   }
   #consent-notice button.btn {
-    background: rgba(var(--color-secondary-500), 0.5);
+    border: 5px;
+    border-color: rgb(var(--color-primary-500));
     text-decoration: none;
     cursor: pointer;
     padding: 10px;
@@ -48,15 +49,14 @@
     box-sizing: border-box;
   }
   #consent-notice button.btn:hover {
-    color: rgba(var(--color-neutral), 0.5);
+    border: 0px;
   }
   #consent-notice span {
     margin-right: 1rem;
   }
   #consent-notice span a:hover {
-    color: rgba(var(--color-neutral), 0.5);
     text-decoration: underline;
-    text-decoration-color: rgba(var(--color-primary-500), 0.5);
+    text-decoration-color: rgb(var(--color-primary-500));
   }
 
   #consent-overlay-container {
@@ -115,7 +115,8 @@
     display: block;
   }
   #consent-overlay button.btn {
-    background: rgba(var(--color-secondary-500), 0.5);
+    border: 5px;
+    border-color: rgb(var(--color-primary-500));
     text-decoration: none;
     cursor: pointer;
     padding: 10px;
@@ -127,7 +128,7 @@
     box-sizing: border-box;
   }
   #consent-overlay button.btn:hover {
-    color: rgba(var(--color-neutral), 0.5);
+    border: 0px;
   }
   @media (max-width: 767px) {
     #consent-notice span {
