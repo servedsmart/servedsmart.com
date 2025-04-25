@@ -8,11 +8,6 @@
  * -----
  */
 
-// Set non-functional scripts
-const scripts = [];
-{{ $currentLang := $.Site.Language.Lang }} {{ $data := index $.Site.Data $currentLang "consent" "items" }} {{ range $index, $item := where $data "is_functional" "eq" false }}
-scripts[{{ $index }}] = "/js/{{ $item.script_file }}"; {{ end }}
-
 // Create cookie, stores accepted as 1 and not accepted as 0 in a single string
 function createCookie(name, value, days) {
   let expires = "";
@@ -41,7 +36,7 @@ function eraseCookie(name) {
 // Modify all consent scripts, targetString should be either "0" or "1"
 function modifyAllConsent(targetString) {
   let consentValue = "";
-  scripts.forEach(function () {
+  optionalScripts.forEach(function () {
     consentValue = consentValue + targetString;
   });
   modifySomeConsent(consentValue);
@@ -59,7 +54,7 @@ function loadConsentScripts(consentValue) {
   let documentScripts = Array.from(document.querySelectorAll("script")).map(
     (scr) => scr.src
   );
-  scripts.forEach(function (value, key) {
+  optionalScripts.forEach(function (value, key) {
     if (documentScripts.includes(value)) {
       return;
     }
