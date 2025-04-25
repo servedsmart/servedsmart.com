@@ -18,29 +18,31 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding: 10px;
+    padding: 20px;
   }
   .consent-notice {
     background: rgba(var(--color-neutral-700), 0.9);
     color: rgb(var(--color-neutral));
-    height: max-content + 50px;
-    width: max-content + 50px;
+    height: max-content;
+    width: max-content;
+    padding: 50px;
     border-radius: 50px;
     text-align: center;
     box-sizing: border-box;
   }
-  .consent-notice button {
+  .consent-notice button.btn {
     text-decoration: none;
     background: rgba(var(--color-secondary-500), 0.5);
     cursor: pointer;
-    padding: 50px;
+    padding: 20px;
+    margin: 20px;
     font-weight: normal;
     display: inline-block;
     width: auto;
-    border-radius: 50px;
+    border-radius: 25px;
     box-sizing: border-box;
   }
-  .consent-notice button:hover {
+  .consent-notice button.btn:hover {
     color: rgba(var(--color-neutral), 0.5);
   }
   .consent-notice span {
@@ -94,7 +96,7 @@
     display: block;
   }
   #consent-overlay button.btn {
-    border-radius: 50px;
+    border-radius: 25px;
     background: rgba(var(--color-secondary-700));
     font-weight: normal;
   }
