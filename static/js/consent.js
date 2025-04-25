@@ -113,6 +113,7 @@ function modifyActiveParent(mutationsList, observer) {
   for (const mutation of mutationsList) {
     if (mutation.type === "attributes" && mutation.attributeName === "class") {
       const targetElement = mutation.target;
+      console.log(targetElement);
       // Check if active has been removed
       if (!targetElement.classList.contains("active")) {
         console.log("if");
@@ -127,6 +128,7 @@ function modifyActiveParent(mutationsList, observer) {
         console.log("else");
         // If it contains active, also add parent element active attribute
         const parentDiv = targetElement.closest("div");
+        console.log(parentDiv);
         parentDiv.classList.add("active");
       }
     }
