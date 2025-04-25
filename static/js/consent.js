@@ -51,7 +51,7 @@ function modifySomeConsent(consentValue) {
 }
 // Load funcional javascript
 function loadFunctionalJS() {
-  const functionalConsent = "";
+  let functionalConsent = "";
   functionalScripts.forEach(function () {
     functionalConsent = functionalConsent + "1";
   });
