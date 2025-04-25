@@ -25,21 +25,20 @@
     border-radius: 20%;
     text-align: center;
     line-height: 2rem;
-    /*
     display: flex;
     align-items: flex-end;
     shape-outside: inset(calc(100% - 100px) 0 0);
-    */
   }
   .consent-notice button {
     text-decoration: none;
     background: rgb(var(--color-secondary-700));
     color: rgb(var(--color-neutral));
-    border: 1px solid #000;
     cursor: pointer;
-    padding: 4px 7px;
-    margin: 2px 0;
+    padding: 2rem 4rem;
+    margin: 2rem 0;
     font-weight: 700;
+    display: inline-block;
+    width: auto;
   }
   .consent-notice button:hover {
     background: rgb(var(--color-neutral));
@@ -47,14 +46,6 @@
   }
   .consent-notice span {
     margin-right: 1rem;
-  }
-  .consent-notice button {
-    display: inline-block;
-    width: auto;
-  }
-  .consent-notice button:hover {
-    display: inline-block;
-    width: auto;
   }
   .consent-notice span a {
     color: inherit;
