@@ -1,0 +1,188 @@
+/*
+ * File = consent.css
+ * Author = Leopold Meinel (leo@meinel.dev)
+ * -----
+ * Copyright (c) 2025 Leopold Meinel & contributors
+ * SPDX ID = MIT
+ * URL = https://opensource.org/licenses/MIT
+ * -----
+ */
+
+:root {
+  --form-control-color: rgb(var(--color-secondary-500));
+  --form-control-disabled: rgb(var(--color-primary-700));
+  --form-background: rgb(var(--color-neutral));
+}
+@media (max-width: 767px) {
+  #consent-notice span {
+    padding: 5px 0px 5px 0px;
+  }
+}
+#consent-notice-container,
+#consent-overlay-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  align-items: flex-end;
+}
+#consent-notice-container {
+  display: flex;
+  align-items: flex-end;
+}
+#consent-notice-container.active,
+#consent-overlay-container.active {
+  display: flex;
+}
+#consent-overlay-container {
+  top: 0;
+  display: none;
+  align-items: center;
+}
+#consent-notice,
+#consent-overlay button.btn,
+#consent-notice button.btn,
+#consent-overlay > div {
+  border-color: rgb(var(--color-primary-500));
+  border-radius: 0.25rem;
+  border-style: solid;
+  border-width: 1px;
+  box-sizing: border-box;
+}
+#consent-notice button.btn,
+#consent-overlay button.btn {
+  position: relative;
+  color: rgb(var(--color-primary-500));
+  text-decoration: none;
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px 10px 0px 10px;
+  font-weight: var(--font-weight-semibold);
+  display: inline-block;
+}
+#consent-notice button.btn:hover,
+#consent-overlay button.btn:hover {
+  border-color: transparent;
+}
+#consent-notice,
+#consent-overlay > div {
+  color: rgb(var(--color-neutral));
+  background: rgb(var(--color-neutral-900));
+  padding: 25px;
+  width: 90%;
+  max-width: 60rem;
+  min-width: 10rem;
+  margin: 15px;
+}
+#consent-notice {
+  display: block;
+  text-align: center;
+}
+#consent-notice.active {
+  display: block;
+}
+#consent-notice span {
+  margin-right: 1rem;
+}
+#consent-notice span a:hover {
+  text-decoration: underline;
+  text-decoration-color: rgb(var(--color-primary-500));
+  text-decoration-thickness: 2px;
+}
+#consent-overlay header,
+#consent-overlay main {
+  margin-left: 1em;
+  font-size: 1.5rem;
+}
+#consent-overlay.active,
+#consent-overlay > div > div {
+  display: flex;
+  flex-wrap: nowrap;
+}
+#consent-overlay {
+  position: fixed;
+  background: rgba(var(--color-neutral-900), 0.9);
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  display: none;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+#consent-overlay > div > div {
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+#consent-overlay > div > div:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  justify-content: center;
+}
+#consent-overlay header {
+  font-weight: var(--font-weight-bold);
+}
+#consent-overlay main {
+  color: rgb(var(--color-primary-500));
+}
+#consent-overlay input {
+  margin-top: 0.1rem;
+}
+.form-control {
+  font-size: 1.5rem;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+}
+.form-control + .form-control {
+  margin-top: 1em;
+}
+.form-control--disabled {
+  color: var(--form-control-disabled);
+  cursor: not-allowed;
+}
+
+input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  /* Remove most all native input styles */
+  appearance: none;
+  /* For iOS < 15 */
+  background-color: var(--form-background);
+  /* Not removed via appearance */
+  margin: 0;
+
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+
+  display: grid;
+  place-content: center;
+}
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.4em;
+  height: 0.4em;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  /* Windows High Contrast Mode */
+  background-color: CanvasText;
+}
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+input[type="checkbox"]:disabled {
+  --form-control-color: var(--form-control-disabled);
+
+  color: var(--form-control-disabled);
+  cursor: not-allowed;
+}
