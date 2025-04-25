@@ -13,3 +13,15 @@ title = 'Aussehen'
 description = 'Dieser Code erlaubt Nutzern, zwischen einem hellen und dunklen Website-Aussehen zu wechseln.'
 is_functional = false
 script_file = 'appearance-cookie.js'
+
+[[items]]
+title = 'test0-de'
+description = 'test0-de-description'
+is_functional = false
+script_file = 'test0.js'
+
+[[items]]
+title = 'test1-de'
+description = 'test1-de-description'
+is_functional = true
+script_file = 'test1.js'
