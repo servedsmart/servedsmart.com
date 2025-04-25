@@ -73,7 +73,7 @@
 #consent-notice,
 #consent-overlay > div {
   color: rgb(var(--color-neutral));
-  background: rgb(var(--color-neutral-900));
+  background: rgb(var(--color-neutral-800));
   padding: 25px;
   width: 90%;
   max-width: 60rem;
