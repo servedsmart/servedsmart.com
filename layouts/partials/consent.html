@@ -208,9 +208,9 @@
 <div id="consent-overlay-container">
   <div id="consent-overlay">
     <div>
+      {{ $currentLang := $.Site.Language.Lang }} {{ $data := index $.Site.Data
+      $currentLang "consent" "items" }} {{ range $index, $item := $data }}
       <div>
-        {{ $currentLang := $.Site.Language.Lang }} {{ $data := index $.Site.Data
-        $currentLang "consent" "items" }} {{ range $index, $item := $data }}
         <label class="form-control">
           <input
             type="checkbox"
@@ -228,8 +228,8 @@
           ><header><h3>{{ $item.title }}</h3></header>
           <main><p>{{ $item.description }}</p></main>
         </label>
-        {{ end }}
       </div>
+      {{ end }}
       <div>
         <button
           id="save-consent"
