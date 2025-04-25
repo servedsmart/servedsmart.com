@@ -15,25 +15,25 @@
     bottom: 0;
     left: 0;
     right: 0;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: flex-end;
     padding: 15px;
   }
-  #consent-notice-container.active {
-    display: flex;
+  #consent-notice-container.inactive {
+    display: none;
   }
   #consent-notice {
     background: rgba(var(--color-neutral-700), 0.9);
     color: rgb(var(--color-neutral));
     padding: 25px;
     border-radius: 25px;
-    display: none;
+    display: block;
     text-align: center;
     box-sizing: border-box;
   }
-  #consent-notice-container.active {
-    display: block;
+  #consent-notice-container.inactive {
+    display: none;
   }
   #consent-notice button.btn {
     background: rgba(var(--color-secondary-500), 0.5);
@@ -139,12 +139,6 @@
     }
   }
 </style>
-<script>
-  document
-    .getElementById("consent-notice-container")
-    .classList.toggle("active");
-  document.getElementById("consent-notice").classList.toggle("active");
-</script>
 <div id="consent-notice-container">
   <div id="consent-notice">
     <span
@@ -248,8 +242,8 @@
   function acceptSomeConsentScripts(consentValue) {
       setConsentInputs(consentValue);
       createCookie('consent-settings',consentValue,31);
-      document.getElementById('consent-notice-container').classList.remove('active');
-      document.getElementById('consent-notice').classList.remove('active');
+      document.getElementById('consent-notice-container').classList.toggle('inactive');
+      document.getElementById('consent-notice').classList.toggle('inactive');
       document.getElementById('consent-overlay-container').classList.remove('active');
       document.getElementById('consent-overlay').classList.remove('active');
       loadConsentScripts(consentValue);
@@ -293,8 +287,8 @@
       setConsentInputs(consentValue);
       loadConsentScripts(consentValue);
   } else {
-    document.getElementById('consent-notice-container').classList.toggle('active');
-    document.getElementById('consent-notice').classList.toggle('active');
+    document.getElementById('consent-notice-container').classList.remove('inactive');
+    document.getElementById('consent-notice').classList.remove('inactive');
   }
   var elements = document.querySelectorAll('.manage-consent');
   elements.forEach(function(el) {
