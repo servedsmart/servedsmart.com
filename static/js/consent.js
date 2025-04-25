@@ -117,19 +117,19 @@ function modifyActiveParent(mutationsList, observer) {
       // Check if active has been removed
       if (!targetElement.classList.contains("active")) {
         console.log("if");
-        // Set display of targetElement and parentDiv to none and remove active attribute
+        // Set display of targetElement and parentEl to none and remove active attribute
         targetElement.style.display = "none";
-        const parentDiv = targetElement.closest("div");
-        if (parentDiv) {
-          parentDiv.classList.remove("active");
-          parentDiv.style.display = "none";
+        const parentEl = targetElement.parentElement;
+        if (parentEl) {
+          parentEl.classList.remove("active");
+          parentEl.style.display = "none";
         }
       } else {
         console.log("else");
         // If it contains active, also add parent element active attribute
-        const parentDiv = targetElement.closest("div");
-        console.log(parentDiv);
-        parentDiv.classList.add("active");
+        const parentEl = targetElement.parentElement;
+        console.log(parentEl);
+        parentEl.classList.add("active");
       }
     }
   }
