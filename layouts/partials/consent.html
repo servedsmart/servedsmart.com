@@ -30,8 +30,8 @@
     box-sizing: border-box;
   }
   #consent-notice button.btn {
-    text-decoration: none;
     background: rgba(var(--color-secondary-500), 0.5);
+    text-decoration: none;
     cursor: pointer;
     padding: 10px;
     margin: 10px 10px 0px 10px;
@@ -54,16 +54,24 @@
     color: rgba(var(--color-neutral), 0.5);
   }
 
-  #consent-overlay {
+  #consent-overlay-container {
     position: fixed;
+    bottom: 0;
     left: 0;
+    right: 0;
     top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #consent-overlay {
+    background: rgba(var(--color-neutral-800), 0.8);
+    color: rgb(var(--color-neutral));
+    position: fixed;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: none;
-    background: rgba(var(--color-neutral-800), 0.9);
-    z-index: 999999;
-    overflow: auto;
+    overflow: hidden;
   }
   #consent-overlay.active {
     display: flex;
@@ -83,12 +91,8 @@
   #consent-overlay > div > div:last-child {
     margin: 0;
   }
-  #consent-overlay h3 {
-    color: rgba(var(--color-neutral), 0.8);
-    padding-top: 0;
-  }
+  #consent-overlay h3,
   #consent-overlay p {
-    color: rgba(var(--color-neutral), 0.8);
     padding-top: 0;
   }
   #consent-overlay input {
@@ -98,9 +102,19 @@
     display: block;
   }
   #consent-overlay button.btn {
-    border-radius: 50px;
-    background: rgba(var(--color-secondary-700));
+    background: rgba(var(--color-secondary-500), 0.5);
+    text-decoration: none;
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px 10px 0px 10px;
     font-weight: normal;
+    display: inline-block;
+    width: auto;
+    border-radius: 50px;
+    box-sizing: border-box;
+  }
+  #consent-overlay button.btn:hover {
+    color: rgba(var(--color-neutral), 0.5);
   }
   /*
   @media (max-width: 767px) {
@@ -137,40 +151,42 @@
     </button>
   </div>
 </div>
-<div id="consent-overlay">
-  <div>
-    {{ $currentLang := $.Site.Language.Lang }} {{ $data := index $.Site.Data
-    $currentLang "consent" "items" }} {{ range $index, $item := $data }}
+<div id="consent-overlay-container">
+  <div id="consent-overlay">
     <div>
-      <input
-        type="checkbox"
-        id="item{{ $index }}"
-        value="1"
-        name="item{{ $index }}"
-        {{
-        if
-        $item.is_functional
-        }}checked
-        disabled{{end}}
-      />
-      <label for="item{{ $index }}">
-        <h3>{{ $item.title }}</h3>
-        <p>{{ $item.description }}</p>
-      </label>
-    </div>
-    {{ end }}
-    <div>
-      <!-- prettier-ignore -->
-      <button
+      {{ $currentLang := $.Site.Language.Lang }} {{ $data := index $.Site.Data
+      $currentLang "consent" "items" }} {{ range $index, $item := $data }}
+      <div>
+        <input
+          type="checkbox"
+          id="item{{ $index }}"
+          value="1"
+          name="item{{ $index }}"
+          {{
+          if
+          $item.is_functional
+          }}checked
+          disabled{{end}}
+        />
+        <label for="item{{ $index }}">
+          <h3>{{ $item.title }}</h3>
+          <p>{{ $item.description }}</p>
+        </label>
+      </div>
+      {{ end }}
+      <div>
+        <!-- prettier-ignore -->
+        <button
         id="save-consent"
         class="btn save-consent"
         data-consentvalue="{{ $currentLang := $.Site.Language.Lang }}{{ $data := index $.Site.Data $currentLang `consent` `items` }}{{ range $data }}{{ if .is_functional}}{{ else }}0{{ end }}{{ end }}"
       >
         {{ T "consent-button-save-consent" }}
       </button>
-      <button class="btn approve-consent">
-        {{ T "consent-button-approve-consent" }}
-      </button>
+        <button class="btn approve-consent">
+          {{ T "consent-button-approve-consent" }}
+        </button>
+      </div>
     </div>
   </div>
 </div>
