@@ -158,8 +158,8 @@
   </div>
 </div>
 <script>
-  {{ $currentLang := $.Site.Language.Lang }} {{ $data := index $.Site.Data $currentLang "consent" "items" }} {{ range $index, $item := where $data "is_functional" "eq" false }}
   const scripts = [];
+  {{ $currentLang := $.Site.Language.Lang }} {{ $data := index $.Site.Data $currentLang "consent" "items" }} {{ range $index, $item := where $data "is_functional" "eq" false }}
   scripts[{{ $index }}] = "/js/{{ $item.script_file }}";
   console.log("{{ $index }}: {{ $item }}"){{ end }}
   console.log(scripts);
