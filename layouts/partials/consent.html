@@ -36,6 +36,7 @@
     display: none;
   }
   #consent-notice button.btn {
+    position: relative;
     color: rgb(var(--color-primary-500));
     border-color: rgb(var(--color-primary-500));
     border-radius: 0.25rem;
@@ -75,9 +76,9 @@
     display: flex;
   }
   #consent-overlay {
+    position: fixed;
     background: rgba(var(--color-neutral-900), 0.9);
     color: rgb(var(--color-neutral));
-    position: fixed;
     text-decoration: none;
     width: 100%;
     height: 100%;
@@ -124,6 +125,7 @@
     display: block;
   }
   #consent-overlay button.btn {
+    position: relative;
     color: rgb(var(--color-primary-500));
     border-color: rgb(var(--color-primary-500));
     border-radius: 0.25rem;
@@ -143,12 +145,7 @@
   }
   @media (max-width: 767px) {
     #consent-notice span {
-      padding-top: 5px;
-      margin-bottom: 1rem;
-    }
-    #consent-notice button.btn {
-      position: relative;
-      bottom: 4px;
+      padding: 5px 0px 5px 0px;
     }
     #consent-overlay > div {
       margin: 10px;
