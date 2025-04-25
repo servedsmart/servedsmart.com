@@ -278,24 +278,16 @@
   function eraseCookie(name) {
     createCookie(name, "", -1);
   }
-  // Deny all consent scripts
-  function denyAllConsentScripts() {
+  // Modify all consent scripts, targetString should be either "0" or "1"
+  function modifyAllConsent(targetString) {
     let consentValue = "";
     scripts.forEach(function () {
-      consentValue = consentValue + "0";
+      consentValue = consentValue + targetString;
     });
-    acceptSomeConsentScripts(consentValue);
+    modifySomeConsent(consentValue);
   }
-  // Accept all consent scripts
-  function acceptAllConsentScripts() {
-    let consentValue = "";
-    scripts.forEach(function () {
-      consentValue = consentValue + "1";
-    });
-    acceptSomeConsentScripts(consentValue);
-  }
-  // Accept certain consent scripts by checking consentValue
-  function acceptSomeConsentScripts(consentValue) {
+  // Modify certain consent scripts by checking consentValue
+  function modifySomeConsent(consentValue) {
     setConsentInputs(consentValue);
     createCookie("consent-settings", consentValue, 31);
     document.getElementById("consent-notice").classList.remove("active");
@@ -390,14 +382,14 @@
     document.getElementById("consent-overlay").classList.add("active");
   });
   addClickExec(document.querySelectorAll(".deny-consent"), function () {
-    denyAllConsentScripts();
+    modifyAllConsent("0");
   });
   addClickExec(document.querySelectorAll(".approve-consent"), function () {
-    acceptAllConsentScripts();
+    modifyAllConsent("1");
   });
   document.getElementById("save-consent").addEventListener("click", function () {
     setConsentValue();
-    acceptSomeConsentScripts(this.dataset.consentvalue);
+    modifySomeConsent(this.dataset.consentvalue);
   });
   // Remove active attribute if clicking outside of div
   document
