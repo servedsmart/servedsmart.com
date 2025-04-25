@@ -8,38 +8,38 @@
 --URL = https://opensource.org/licenses/MIT
 -------
  -->
-{{ $style := resources.Get "/css/consent.css" | minify | fingerprint }}
+{{- $style := resources.Get "/css/consent.css" | minify | fingerprint -}}
 
 <div id="consent-notice-container">
   <div id="consent-notice">
     <span
-      >{{ T "consent-text-start" }}<a
+      >{{- T "consent-text-start" -}}<a
         class="manage-consent"
         href="#manage-consent"
-        >{{ T "consent-text-href" }}</a
-      >{{ T "consent-text-end" }}</span
+        >{{- T "consent-text-href" -}}</a
+      >{{- T "consent-text-end" -}}</span
     ><br />
     <button class="btn manage-consent">
-      {{ T "consent-button-manage-consent" }}</button
+      {{- T "consent-button-manage-consent" -}}</button
     ><button class="btn deny-consent">
-      {{ T "consent-button-deny-consent" }}</button
+      {{- T "consent-button-deny-consent" -}}</button
     ><button class="btn approve-consent">
-      {{ T "consent-button-approve-consent" }}
+      {{- T "consent-button-approve-consent" -}}
     </button>
   </div>
 </div>
 <div id="consent-overlay-container">
   <div id="consent-overlay">
     <div>
-      {{ $currentLang := $.Site.Language.Lang }} {{ $data := index $.Site.Data
-      $currentLang "consent" "items" }} {{ range $index, $item := $data }}
+      {{- $currentLang := $.Site.Language.Lang -}} {{- $data := index $.Site.Data
+      $currentLang "consent" "items" -}} {{- range $index, $item := $data -}}
       <div>
         <label class="form-control">
           <input
             type="checkbox"
-            id="item{{ $index }}"
+            id="item{{- $index -}}"
             value="1"
-            name="item{{ $index }}"
+            name="item{{- $index -}}"
             {{
             if
             $item.is_functional
@@ -47,21 +47,21 @@
             disabled{{end}}
           />
         </label>
-        <label for="item{{ $index }}"
-          ><header><h3>{{ $item.title }}</h3></header>
-          <main><p>{{ $item.description }}</p></main>
+        <label for="item{{- $index -}}"
+          ><header><h3>{{- $item.title -}}</h3></header>
+          <main><p>{{- $item.description -}}</p></main>
         </label>
       </div>
-      {{ end }}
+      {{- end -}}
       <div>
         <button
           id="save-consent"
           class="btn save-consent"
-          data-consentvalue="{{ $currentLang := $.Site.Language.Lang }}{{ $data := index $.Site.Data $currentLang `consent` `items` }}{{ range $data }}{{ if .is_functional}}{{ else }}0{{ end }}{{ end }}"
+          data-consentvalue="{{- $currentLang := $.Site.Language.Lang -}}{{- $data := index $.Site.Data $currentLang `consent` `items` -}}{{- range $data -}}{{- if .is_functional-}}{{- else -}}0{{- end -}}{{- end -}}"
         >
-          {{ T "consent-button-save-consent" }}</button
+          {{- T "consent-button-save-consent" -}}</button
         ><button class="btn approve-consent">
-          {{ T "consent-button-approve-consent" }}
+          {{- T "consent-button-approve-consent" -}}
         </button>
       </div>
     </div>
@@ -70,10 +70,10 @@
 
 <script>
   const optionalScripts = [];
-  {{ $currentLang := $.Site.Language.Lang }} {{ $data := index $.Site.Data $currentLang "consent" "items" }} {{ range $index, $item := where $data "is_functional" "eq" false }}
-  optionalScripts[{{ $index }}] = "/js/{{ $item.script_file }}"; {{ end }}
+  {{- $currentLang := $.Site.Language.Lang -}} {{- $data := index $.Site.Data $currentLang "consent" "items" -}} {{- range $index, $item := where $data "is_functional" "eq" false -}}
+  optionalScripts[{{- $index -}}] = "/js/{{- $item.script_file -}}"; {{- end -}}
   const functionalScripts = [];
-  {{ $currentLang := $.Site.Language.Lang }} {{ $data := index $.Site.Data $currentLang "consent" "items" }} {{ range $index, $item := where $data "is_functional" "eq" true }}
-  functionalScripts[{{ $index }}] = "/js/{{ $item.script_file }}"; {{ end }}
+  {{- $currentLang := $.Site.Language.Lang -}} {{- $data := index $.Site.Data $currentLang "consent" "items" -}} {{- range $index, $item := where $data "is_functional" "eq" true -}}
+  functionalScripts[{{- $index -}}] = "/js/{{- $item.script_file -}}"; {{- end -}}
 </script>
-{{ $js := resources.Get "/js/consent.js" | minify | fingerprint }}
+{{- $js := resources.Get "/js/consent.js" | minify | fingerprint -}}
