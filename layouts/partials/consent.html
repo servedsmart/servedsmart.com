@@ -27,7 +27,7 @@
     background: rgba(var(--color-neutral-700), 0.9);
     color: rgb(var(--color-neutral));
     padding: 25px;
-    border-radius: 25px;
+    border-radius: 0.25rem;
     display: block;
     text-align: center;
     box-sizing: border-box;
@@ -36,9 +36,11 @@
     display: none;
   }
   #consent-notice button.btn {
-    border: 5px;
-    border-style: solid;
     border-color: rgb(var(--color-primary-500));
+    border-radius: 0.25rem;
+    border-style: solid;
+    border-width: 1px;
+    box-sizing: content-box;
     text-decoration: none;
     cursor: pointer;
     padding: 10px;
@@ -46,11 +48,9 @@
     font-weight: normal;
     display: inline-block;
     width: auto;
-    border-radius: 50px;
-    box-sizing: border-box;
   }
   #consent-notice button.btn:hover {
-    border: 0px;
+    border-width: 0px;
   }
   #consent-notice span {
     margin-right: 1rem;
@@ -88,15 +88,15 @@
   }
   #consent-overlay > div {
     background: rgba(var(--color-neutral-700), 0.9);
-    border: 5px;
-    border-style: solid;
     border-color: rgba(var(--color-primary-500), 0.9);
-    border-radius: 10px;
+    border-radius: 0.25rem;
+    border-style: solid;
+    border-width: 1px;
+    box-sizing: border-box;
     width: 100%;
     max-width: 30rem;
     padding: 1.75rem;
     margin: auto;
-    box-sizing: border-box;
   }
   #consent-overlay > div > div {
     display: flex;
@@ -117,9 +117,11 @@
     display: block;
   }
   #consent-overlay button.btn {
-    border: 5px;
-    border-style: solid;
     border-color: rgb(var(--color-primary-500));
+    border-radius: 0.25rem;
+    border-style: solid;
+    border-width: 1px;
+    box-sizing: content-box;
     text-decoration: none;
     cursor: pointer;
     padding: 10px;
@@ -127,11 +129,9 @@
     font-weight: normal;
     display: inline-block;
     width: auto;
-    border-radius: 50px;
-    box-sizing: border-box;
   }
   #consent-overlay button.btn:hover {
-    border: 0px;
+    border-width: 0px;
   }
   @media (max-width: 767px) {
     #consent-notice span {
