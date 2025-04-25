@@ -33,11 +33,11 @@ function readCookie(name) {
 function eraseCookie(name) {
   createCookie(name, "", -1);
 }
-// Modify all consent scripts, targetString should be either "0" or "1"
-function modifyAllConsent(scripts, targetString) {
+// Modify all consent scripts, string should be either "0" or "1"
+function modifyAllConsent(scripts, string) {
   let consentValue = "";
   scripts.forEach(function () {
-    consentValue = consentValue + targetString;
+    consentValue = consentValue + string;
   });
   modifySomeConsent(consentValue);
 }
@@ -45,7 +45,7 @@ function modifyAllConsent(scripts, targetString) {
 function modifySomeConsent(consentValue) {
   setConsentInputs(consentValue);
   createCookie("consent-settings", consentValue, 31);
-  document.getElementById("consent-notice").classList.remove("active");
+  hideElementWithParent(document.getElementById("consent-notice"));
   document.getElementById("consent-overlay").classList.remove("active");
   loadOptionalJS(optionalScripts, consentValue);
 }
@@ -108,25 +108,19 @@ function addClickExec(elements, fn) {
     el.addEventListener("click", fn);
   });
 }
-// Modify active attribute in parent elements
+// Modify active attribute in parent element
 function modifyActiveParent(mutationsList, observer) {
   for (const mutation of mutationsList) {
     if (mutation.type === "attributes" && mutation.attributeName === "class") {
-      const targetElement = mutation.target;
+      const element = mutation.target;
       // Check if active has been removed
-      if (!targetElement.classList.contains("active")) {
-        // Set display of targetElement and parentEl to none and remove active attribute
-        targetElement.style.display = "none";
-        const parentEl = targetElement.parentElement;
-        if (parentEl) {
-          parentEl.classList.remove("active");
-          parentEl.style.display = "none";
-        }
+      if (!element.classList.contains("active")) {
+        // Remove active attribute from parentEl
+        element.parentElement.classList.remove("active");
         observer.disconnect();
       } else {
         // If it contains active, also add parent element active attribute
-        const parentEl = targetElement.parentElement;
-        parentEl.classList.add("active");
+        element.parentElement.classList.add("active");
       }
     }
   }
@@ -135,6 +129,12 @@ function modifyActiveParent(mutationsList, observer) {
 function observeElement(element) {
   const observer = new MutationObserver(modifyActiveParent);
   observer.observe(element, { attributes: true });
+}
+// Hide an element and its parent element
+function hideElementWithParent(element) {
+  element.classList.remove("active");
+  element.style.display = "none";
+  element.parentElement.style.display = "none";
 }
 
 // Load functional javascript
