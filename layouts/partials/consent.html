@@ -24,7 +24,7 @@
     display: none;
   }
   #consent-notice {
-    background: rgba(var(--color-neutral-700), 0.9);
+    background: rgba(var(--color-neutral-800), 0.9);
     color: rgb(var(--color-neutral));
     padding: 25px;
     border-radius: 0.25rem;
@@ -36,11 +36,12 @@
     display: none;
   }
   #consent-notice button.btn {
+    color: rgb(var(--color-primary-500));
     border-color: rgb(var(--color-primary-500));
     border-radius: 0.25rem;
     border-style: solid;
     border-width: 1px;
-    box-sizing: content-box;
+    box-sizing: initial;
     text-decoration: none;
     cursor: pointer;
     padding: 10px;
@@ -74,7 +75,7 @@
     display: flex;
   }
   #consent-overlay {
-    background: rgba(var(--color-neutral-800), 0.9);
+    background: rgba(var(--color-neutral-900), 0.9);
     color: rgb(var(--color-neutral));
     position: fixed;
     text-decoration: none;
@@ -87,8 +88,8 @@
     display: flex;
   }
   #consent-overlay > div {
-    background: rgba(var(--color-neutral-700), 0.9);
-    border-color: rgba(var(--color-primary-500), 0.9);
+    background: rgb(var(--color-neutral-800));
+    border-color: rgb(var(--color-primary-500));
     border-radius: 0.25rem;
     border-style: solid;
     border-width: 1px;
@@ -110,6 +111,12 @@
   #consent-overlay p {
     padding-top: 0;
   }
+  #consent-overlay h3 {
+    font-weight: 700;
+  }
+  #consent-overlay p {
+    color: rgb(var(--color-primary-500));
+  }
   #consent-overlay input {
     margin-top: 0.3rem;
   }
@@ -117,11 +124,12 @@
     display: block;
   }
   #consent-overlay button.btn {
+    color: rgb(var(--color-primary-500));
     border-color: rgb(var(--color-primary-500));
     border-radius: 0.25rem;
     border-style: solid;
     border-width: 1px;
-    box-sizing: content-box;
+    box-sizing: initial;
     text-decoration: none;
     cursor: pointer;
     padding: 10px;
