@@ -72,14 +72,14 @@
   }
   #consent-notice,
   #consent-overlay > div {
+    color: rgb(var(--color-neutral));
+    background: rgb(var(--color-neutral-900));
+    padding: 25px;
     width: 90%;
     max-width: 60rem;
     min-width: 10rem;
   }
   #consent-notice {
-    background: rgb(var(--color-neutral-900));
-    color: rgb(var(--color-neutral));
-    padding: 25px;
     display: block;
     text-align: center;
   }
@@ -99,7 +99,6 @@
   #consent-overlay {
     position: fixed;
     background: rgba(var(--color-neutral-900), 0.9);
-    color: rgb(var(--color-neutral));
     text-decoration: none;
     width: 100%;
     height: 100%;
@@ -110,10 +109,6 @@
   }
   #consent-overlay.active {
     display: flex;
-  }
-  #consent-overlay > div {
-    background: rgb(var(--color-neutral-900));
-    padding: 25px;
   }
   #consent-overlay > div > div {
     display: flex;
