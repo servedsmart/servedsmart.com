@@ -22,6 +22,7 @@
 #consent-overlay-container,
 #consent-notice,
 #consent-overlay {
+  display: none;
   text-decoration: none;
 }
 #consent-notice-container,
@@ -34,7 +35,6 @@
   align-items: flex-end;
 }
 #consent-notice-container {
-  display: flex;
   align-items: flex-end;
 }
 #consent-notice-container.active,
@@ -43,7 +43,6 @@
 }
 #consent-overlay-container {
   top: 0;
-  display: none;
   align-items: center;
 }
 #consent-notice,
@@ -81,7 +80,6 @@
   margin: 15px;
 }
 #consent-notice {
-  display: block;
   text-align: center;
 }
 #consent-notice.active {
@@ -110,7 +108,6 @@
   background: rgba(var(--color-neutral-900), 0.9);
   width: 100%;
   height: 100%;
-  display: none;
   overflow: hidden;
   justify-content: center;
   align-items: center;

@@ -45,7 +45,7 @@ function modifyAllConsent(scripts, string) {
 function modifySomeConsent(consentValue) {
   setConsentInputs(consentValue);
   createCookie("consent-settings", consentValue, 31);
-  hideElementWithParent(document.getElementById("consent-notice"));
+  document.getElementById("consent-notice").classList.remove("active");
   document.getElementById("consent-overlay").classList.remove("active");
   loadOptionalJS(optionalScripts, consentValue);
 }
@@ -129,12 +129,6 @@ function modifyActiveParent(mutationsList, observer) {
 function observeElement(element) {
   const observer = new MutationObserver(modifyActiveParent);
   observer.observe(element, { attributes: true });
-}
-// Hide an element and its parent element
-function hideElementWithParent(element) {
-  element.classList.remove("active");
-  element.style.display = "none";
-  element.parentElement.style.display = "none";
 }
 
 // Load functional javascript
