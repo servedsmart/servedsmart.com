@@ -16,46 +16,36 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding: 1rem 1rem;
+    padding: 10px;
     box-sizing: border-box;
   }
   .consent-notice {
-    background: rgb(var(--color-neutral-700));
+    background: rgba(var(--color-neutral-700), 0.9);
     color: rgb(var(--color-neutral));
-    border-radius: 20%;
     text-align: center;
-    line-height: 2rem;
     display: flex;
     align-items: flex-end;
     shape-outside: inset(calc(100% - 100px) 0 0);
   }
   .consent-notice button {
     text-decoration: none;
-    background: rgb(var(--color-secondary-700));
-    color: rgb(var(--color-neutral));
+    background: rgba(var(--color-primary-500), 0.5);
     cursor: pointer;
-    padding: 2rem 4rem;
-    margin: 2rem 0;
-    font-weight: 700;
+    padding: 5px;
+    font-weight: normal;
     display: inline-block;
     width: auto;
+    border-radius: 20%;
+    box-sizing: border-box;
   }
   .consent-notice button:hover {
-    background: rgb(var(--color-neutral));
-    color: rgb(var(--color-secondary-700));
+    color: rgba(var(--color-neutral), 0.5);
   }
   .consent-notice span {
     margin-right: 1rem;
   }
   .consent-notice span a {
-    color: inherit;
-    text-decoration: rgb(var(--color-primary-500));
-    text-decoration-color: rgba(var(--color-neutral), 0.5);
-  }
-  .consent-notice button.btn {
-    border-radius: 25%;
-    background: rgb(var(--color-secondary-700));
-    font-weight: normal;
+    text-decoration: underline;
   }
 
   #consent-overlay {
@@ -102,8 +92,8 @@
     display: block;
   }
   #consent-overlay button.btn {
-    border-radius: 25%;
-    background: rgba(var(--color-secondary-700));
+    border-radius: 20%;
+    background: rgba(var(--color-primary-700));
     font-weight: normal;
   }
 
