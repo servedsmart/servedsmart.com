@@ -363,8 +363,8 @@
       }
   });
 
-  // Remove active class fom parent div and make sure that style.display is none
-  function handleClassRemoval(mutationsList, observer) {
+  // Modify active attribute in parent elements
+  function modifyActiveParent(mutationsList, observer) {
       for (const mutation of mutationsList) {
         if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
           const targetElement = mutation.target;
@@ -383,10 +383,10 @@
       }
       observer.disconnect();
     }
-    // Use MutationObserver to check for active state
-    const consentNoticeObserver = new MutationObserver(handleClassRemoval);
+    // Use MutationObserver to observe active state
+    const consentNoticeObserver = new MutationObserver(modifyActiveParent);
     consentNoticeObserver.observe(document.getElementById('consent-notice'), { attributes: true });
-    const consentOverlayObserver = new MutationObserver(handleClassRemoval);
+    const consentOverlayObserver = new MutationObserver(modifyActiveParent);
     consentOverlayObserver.observe(document.getElementById('consent-overlay'), { attributes: true });
 </script>
 
