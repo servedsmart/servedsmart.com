@@ -34,9 +34,9 @@ function eraseCookie(name) {
   createCookie(name, "", -1);
 }
 // Modify all consent scripts, targetString should be either "0" or "1"
-function modifyAllConsent(targetString) {
+function modifyAllConsent(scripts, targetString) {
   let consentValue = "";
-  optionalScripts.forEach(function () {
+  scripts.forEach(function () {
     consentValue = consentValue + targetString;
   });
   modifySomeConsent(consentValue);
@@ -47,14 +47,22 @@ function modifySomeConsent(consentValue) {
   createCookie("consent-settings", consentValue, 31);
   document.getElementById("consent-notice").classList.remove("active");
   document.getElementById("consent-overlay").classList.remove("active");
-  loadConsentScripts(consentValue);
+  loadOptionalJS(optionalScripts, consentValue);
 }
-// Load javascript
-function loadConsentScripts(consentValue) {
+// Load funcional javascript
+function loadFunctionalJS() {
+  const functionalConsent = "";
+  functionalScripts.forEach(function () {
+    functionalConsent = functionalConsent + "1";
+  });
+  loadOptionalJS(functionalScripts, functionalConsent);
+}
+// Load optional javascript
+function loadOptionalJS(scripts, consentValue) {
   let documentScripts = Array.from(document.querySelectorAll("script")).map(
     (scr) => scr.src
   );
-  optionalScripts.forEach(function (value, key) {
+  scripts.forEach(function (value, key) {
     if (documentScripts.includes(value)) {
       return;
     }
@@ -100,7 +108,6 @@ function addClickExec(elements, fn) {
     el.addEventListener("click", fn);
   });
 }
-
 // Modify active attribute in parent elements
 function modifyActiveParent(mutationsList, observer) {
   for (const mutation of mutationsList) {
@@ -127,6 +134,9 @@ function modifyActiveParent(mutationsList, observer) {
   observer.disconnect();
 }
 
+// Load functional javascript
+loadFunctionalJS();
+
 // Uncheck checkboxes
 setUnchecked(
   document.querySelectorAll("#consent-overlay input:not([disabled])")
@@ -136,7 +146,7 @@ setUnchecked(
 if (readCookie("consent-settings")) {
   const consentValue = readCookie("consent-settings").toString();
   setConsentInputs(consentValue);
-  loadConsentScripts(consentValue);
+  loadOptionalJS(optionalScripts, consentValue);
 } else {
   document.getElementById("consent-notice").classList.add("active");
 }
@@ -145,10 +155,10 @@ addClickExec(document.querySelectorAll(".manage-consent"), function () {
   document.getElementById("consent-overlay").classList.add("active");
 });
 addClickExec(document.querySelectorAll(".deny-consent"), function () {
-  modifyAllConsent("0");
+  modifyAllConsent(optionalScripts, "0");
 });
 addClickExec(document.querySelectorAll(".approve-consent"), function () {
-  modifyAllConsent("1");
+  modifyAllConsent(optionalScripts, "1");
 });
 document.getElementById("save-consent").addEventListener("click", function () {
   setConsentValue();
