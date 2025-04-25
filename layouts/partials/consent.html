@@ -117,14 +117,10 @@
   #consent-overlay > div > div:last-child {
     margin: 0;
   }
-  #consent-overlay h3,
-  #consent-overlay p {
-    padding-top: 0;
-  }
-  #consent-overlay h3 {
+  #consent-overlay header {
     font-weight: var(--font-weight-bold);
   }
-  #consent-overlay p {
+  #consent-overlay main {
     color: rgb(var(--color-primary-500));
   }
   #consent-overlay input {
@@ -254,8 +250,8 @@
             disabled{{end}}
           />
           <label for="item{{ $index }}"
-            ><h3>{{ $item.title }}</h3>
-            <p>{{ $item.description }}</p>
+            ><header><p>{{ $item.title }}</p></header>
+            <main><p>{{ $item.description }}</p></main>
           </label>
         </label>
       </div>
