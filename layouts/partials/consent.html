@@ -15,19 +15,25 @@
     bottom: 0;
     left: 0;
     right: 0;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: flex-end;
     padding: 15px;
+  }
+  #consent-notice-container.active {
+    display: flex;
   }
   #consent-notice {
     background: rgba(var(--color-neutral-700), 0.9);
     color: rgb(var(--color-neutral));
     padding: 25px;
     border-radius: 25px;
-    display: block;
+    display: none;
     text-align: center;
     box-sizing: border-box;
+  }
+  #consent-notice-container.active {
+    display: block;
   }
   #consent-notice button.btn {
     background: rgba(var(--color-secondary-500), 0.5);
@@ -60,9 +66,12 @@
     left: 0;
     right: 0;
     top: 0;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
+  }
+  #consent-overlay-container.active {
+    display: flex;
   }
   #consent-overlay {
     background: rgba(var(--color-neutral-800), 0.8);
@@ -233,8 +242,9 @@
   function acceptSomeConsentScripts(consentValue) {
       setConsentInputs(consentValue);
       createCookie('consent-settings',consentValue,31);
-      document.getElementById('consent-notice-container').style.display = 'none';
-      document.getElementById('consent-notice').style.display = 'none';
+      document.getElementById('consent-notice-container').classList.remove('active');
+      document.getElementById('consent-notice').classList.remove('active');
+      document.getElementById('consent-overlay-container').classList.remove('active');
       document.getElementById('consent-overlay').classList.remove('active');
       loadConsentScripts(consentValue);
   }
@@ -277,12 +287,13 @@
       setConsentInputs(consentValue);
       loadConsentScripts(consentValue);
   } else {
-    document.getElementById('consent-notice-container').style.display = 'flex';
-    document.getElementById('consent-notice').style.display = 'block';
+    document.getElementById('consent-notice-container').classList.toggle('active');
+    document.getElementById('consent-notice').classList.toggle('active');
   }
   var elements = document.querySelectorAll('.manage-consent');
   elements.forEach(function(el) {
       el.addEventListener("click",function() {
+          document.getElementById('consent-overlay-container').classList.toggle('active');
           document.getElementById('consent-overlay').classList.toggle('active');
       });
   });
