@@ -23,19 +23,19 @@
   .consent-notice {
     background: rgba(var(--color-neutral-700), 0.9);
     color: rgb(var(--color-neutral));
+    height: max-content;
+    width: max-content;
     text-align: center;
-    display: flex;
-    align-items: flex-end;
   }
   .consent-notice button {
     text-decoration: none;
     background: rgba(var(--color-secondary-500), 0.5);
     cursor: pointer;
-    padding: 5px;
+    padding: 20px;
     font-weight: normal;
     display: inline-block;
     width: auto;
-    border-radius: 20%;
+    border-radius: 20px;
     box-sizing: border-box;
   }
   .consent-notice button:hover {
@@ -92,7 +92,7 @@
     display: block;
   }
   #consent-overlay button.btn {
-    border-radius: 20%;
+    border-radius: 20px;
     background: rgba(var(--color-secondary-700));
     font-weight: normal;
   }
@@ -101,12 +101,12 @@
     #consent-overlay > div {
       padding: 1.75rem 1rem;
     }
-    #consent-notice span {
+    .consent-notice span {
       display: block;
       padding-top: 3px;
       margin-bottom: 1.5rem;
     }
-    #consent-notice button.btn {
+    .consent-notice button.btn {
       position: relative;
       bottom: 4px;
     }
