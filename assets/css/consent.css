@@ -26,7 +26,8 @@
   text-decoration: none;
 }
 #consent-notice-container,
-#consent-overlay-container {
+#consent-overlay-container,
+#consent-overlay {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -96,12 +97,10 @@
   flex-wrap: nowrap;
 }
 #consent-overlay {
-  position: fixed;
   background: rgba(var(--color-neutral-900), 0.9);
   width: 100vw;
   height: 100vh;
   overflow: scroll;
-  justify-content: center;
   align-items: center;
 }
 #consent-overlay > div > div {
