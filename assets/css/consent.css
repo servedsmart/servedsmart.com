@@ -30,7 +30,6 @@
   justify-content: center;
 }
 #consent-notice-container {
-  top: 0;
   align-items: flex-end;
 }
 #consent-notice-container.active,
@@ -38,6 +37,7 @@
   display: flex;
 }
 #consent-overlay-container {
+  top: 0;
   align-items: center;
 }
 #consent-notice,
