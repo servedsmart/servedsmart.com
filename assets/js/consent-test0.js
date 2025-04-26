@@ -8,4 +8,4 @@
  * -----
  */
 
-console.log(File.toString);
+console.log("test0");
