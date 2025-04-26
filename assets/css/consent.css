@@ -96,7 +96,7 @@
 #consent-overlay header,
 #consent-overlay main {
   margin-left: 1em;
-  font-size: 1.5rem;
+  font-size: 12pt;
 }
 #consent-overlay.active,
 #consent-overlay > div > div {
@@ -128,11 +128,8 @@
 #consent-overlay main {
   color: rgb(var(--color-primary-500));
 }
-#consent-overlay input {
-  margin-top: 0.1rem;
-}
 .form-control {
-  font-size: 1.5rem;
+  font-size: 12pt;
   display: grid;
   grid-template-columns: 1em auto;
   gap: 0.5em;
