@@ -12,7 +12,7 @@
 title = 'Appearance'
 description = 'This code gives users the ability to switch between a dark and a light website theme.'
 is_functional = false
-script_file = 'consent-appearance.js'
+script_file = 'appearance.js'
 
 [[items]]
 title = 'test0'
