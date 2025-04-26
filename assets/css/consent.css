@@ -13,11 +13,6 @@
   --form-control-disabled: rgb(var(--color-primary-700));
   --form-background: rgb(var(--color-neutral));
 }
-@media (max-width: 767px) {
-  #consent-notice span {
-    padding: 5px 0px 5px 0px;
-  }
-}
 #consent-notice-container,
 #consent-overlay-container,
 #consent-notice,
