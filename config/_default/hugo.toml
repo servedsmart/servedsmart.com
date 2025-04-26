@@ -39,15 +39,6 @@ priority = 0.5
 [outputs]
 home = ["HTML", "RSS", "JSON"]
 
-[minify]
-disableCSS = false
-disableHTML = false
-disableJS = false
-disableJSON = false
-disableSVG = false
-disableXML = false
-minifyOutput = true
-
 [related]
 threshold = 0
 toLower = false
