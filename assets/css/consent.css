@@ -75,6 +75,7 @@
   background: rgb(var(--color-neutral-800));
   padding: 25px;
   max-width: 60rem;
+  margin: auto;
 }
 #consent-notice {
   text-align: center;
