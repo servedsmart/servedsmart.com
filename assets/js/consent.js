@@ -45,8 +45,8 @@ function modifyAllConsent(scripts, string) {
 function modifySomeConsent(consentValue) {
   setConsentInputs(consentValue);
   createCookie("consent-settings", consentValue, 31);
-  document.getElementById("consent-notice").classList.remove("active");
-  document.getElementById("consent-overlay").classList.remove("active");
+  deactivateWithParent(document.getElementById("consent-notice"));
+  deactivateWithParent(document.getElementById("consent-overlay"));
   loadOptionalJS(optionalScripts, consentValue);
 }
 // Load funcional javascript
@@ -108,27 +108,15 @@ function addClickExec(elements, fn) {
     el.addEventListener("click", fn);
   });
 }
-// Modify active attribute in parent element
-function modifyActiveParent(mutationsList, observer) {
-  for (const mutation of mutationsList) {
-    if (mutation.type === "attributes" && mutation.attributeName === "class") {
-      const element = mutation.target;
-      // Check if active has been removed
-      if (!element.classList.contains("active")) {
-        // Remove active attribute from parentEl
-        element.parentElement.classList.remove("active");
-        observer.disconnect();
-      } else {
-        // If it contains active, also add parent element active attribute
-        element.parentElement.classList.add("active");
-      }
-    }
-  }
+// Activate element and parentElement
+function activateWithParent(element) {
+  element.classList.add("active");
+  element.parentElement.classList.add("active");
 }
-// Observe an element via MutationObserver
-function observeElement(element) {
-  const observer = new MutationObserver(modifyActiveParent);
-  observer.observe(element, { attributes: true });
+// Deactivate element and parentElement
+function deactivateWithParent(element) {
+  element.classList.remove("active");
+  element.parentElement.classList.remove("active");
 }
 
 // Load functional javascript
@@ -145,13 +133,11 @@ if (readCookie("consent-settings")) {
   setConsentInputs(consentValue);
   loadOptionalJS(optionalScripts, consentValue);
 } else {
-  document.getElementById("consent-notice").classList.add("active");
-  observeElement(document.getElementById("consent-notice"));
+  activateWithParent(document.getElementById("consent-notice"));
 }
 // Handle consent buttons
 addClickExec(document.querySelectorAll(".manage-consent"), function () {
-  document.getElementById("consent-overlay").classList.add("active");
-  observeElement(document.getElementById("consent-overlay"));
+  activateWithParent(document.getElementById("consent-overlay"));
 });
 addClickExec(document.querySelectorAll(".deny-consent"), function () {
   modifyAllConsent(optionalScripts, "0");
@@ -168,10 +154,6 @@ document
   .getElementById("consent-overlay")
   .addEventListener("click", function (e) {
     if (!document.querySelector("#consent-overlay > div").contains(e.target)) {
-      this.classList.remove("active");
+      deactivateWithParent(this);
     }
   });
-
-// Use MutationObserver to observe active state
-observeElement(document.getElementById("consent-notice"));
-observeElement(document.getElementById("consent-overlay"));
