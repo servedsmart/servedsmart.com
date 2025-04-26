@@ -39,26 +39,26 @@ function modifyAllConsent(scripts, string) {
   scripts.forEach(function () {
     consentValue = consentValue + string;
   });
-  modifySomeConsent(consentValue);
+  loadOptionalJS(consentValue);
 }
-// Modify certain consent scripts by checking consentValue
-function modifySomeConsent(consentValue) {
+// Load optional javascript
+function loadOptionalJS(consentValue) {
   setConsentInputs(consentValue);
   createCookie("consent-settings", consentValue, 31);
   deactivateWithParent(document.getElementById("consent-notice"));
   deactivateWithParent(document.getElementById("consent-overlay"));
-  loadOptionalJS(optionalScripts, consentValue);
+  loadJS(optionalScripts, consentValue);
 }
 // Load funcional javascript
 function loadFunctionalJS() {
-  let functionalConsent = "";
+  let consentValue = "";
   functionalScripts.forEach(function () {
-    functionalConsent = functionalConsent + "1";
+    consentValue = consentValue + "1";
   });
-  loadOptionalJS(functionalScripts, functionalConsent);
+  loadJS(functionalScripts, consentValue);
 }
-// Load optional javascript
-function loadOptionalJS(scripts, consentValue) {
+// Load javascript
+function loadJS(scripts, consentValue) {
   const documentScripts = Array.from(document.querySelectorAll("script")).map(
     (scr) => scr.src
   );
@@ -135,7 +135,7 @@ setUnchecked(
 if (readCookie("consent-settings")) {
   const consentValue = readCookie("consent-settings").toString();
   setConsentInputs(consentValue);
-  loadOptionalJS(optionalScripts, consentValue);
+  loadJS(optionalScripts, consentValue);
 } else {
   activateWithParent(document.getElementById("consent-notice"));
 }
@@ -151,7 +151,7 @@ addClickExec(document.querySelectorAll(".approve-consent"), function () {
 });
 document.getElementById("save-consent").addEventListener("click", function () {
   setConsentValue();
-  modifySomeConsent(this.dataset.consentvalue);
+  loadOptionalJS(this.dataset.consentvalue);
 });
 // Remove active attribute if clicking outside of div
 document
