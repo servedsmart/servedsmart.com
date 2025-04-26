@@ -93,10 +93,6 @@
   text-decoration-color: rgb(var(--color-primary-500));
   text-decoration-thickness: 2px;
 }
-#consent-overlay header,
-#consent-overlay main {
-  margin-left: 1em;
-}
 #consent-overlay.active,
 #consent-overlay > div > div {
   display: flex;
@@ -131,7 +127,7 @@
   align-items: center;
   display: grid;
   grid-template-columns: 1em auto;
-  gap: 0.5em;
+  gap: 1em;
 }
 .form-control + .form-control {
   margin-top: 1em;
