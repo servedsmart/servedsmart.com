@@ -64,6 +64,7 @@ function loadOptionalJS(scripts, consentValue) {
   );
   console.log(documentScripts)
   scripts.forEach(function (value, key) {
+    console.log(value)
     if (documentScripts.includes(value)) {
       return;
     }
