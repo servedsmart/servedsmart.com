@@ -62,6 +62,7 @@ function loadOptionalJS(scripts, consentValue) {
   const documentScripts = Array.from(document.querySelectorAll("script")).map(
     (scr) => scr.src
   );
+  console.log(documentScripts)
   scripts.forEach(function (value, key) {
     if (documentScripts.includes(value)) {
       return;
