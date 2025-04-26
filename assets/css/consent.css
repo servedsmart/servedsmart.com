@@ -77,10 +77,10 @@
   width: 90%;
   max-width: 60rem;
   min-width: 10rem;
-  margin: 15px;
 }
 #consent-notice {
   text-align: center;
+  margin: 15px;
 }
 #consent-notice.active {
   display: block;
