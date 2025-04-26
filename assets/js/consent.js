@@ -59,7 +59,7 @@ function loadFunctionalJS() {
 }
 // Load optional javascript
 function loadOptionalJS(scripts, consentValue) {
-  let documentScripts = Array.from(document.querySelectorAll("script")).map(
+  const documentScripts = Array.from(document.querySelectorAll("script")).map(
     (scr) => scr.src
   );
   scripts.forEach(function (value, key) {
