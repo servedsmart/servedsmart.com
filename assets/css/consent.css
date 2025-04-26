@@ -130,6 +130,7 @@
 }
 .form-control {
   font-size: 12pt;
+  align-items: center;
   display: grid;
   grid-template-columns: 1em auto;
   gap: 0.5em;
