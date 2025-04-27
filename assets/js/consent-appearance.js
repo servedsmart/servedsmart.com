@@ -12,8 +12,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
   const switcher = document.getElementById("appearance-switcher");
   const switcherMobile = document.getElementById("appearance-switcher-mobile");
 
-  console.log(switcher);
-  console.log(switcherMobile);
+  console.log("switcher: " + switcher);
+  console.log("switcherMobile: " + switcherMobile);
   updateMeta();
   this.updateLogo?.(getTargetAppearance());
 
