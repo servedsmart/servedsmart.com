@@ -72,11 +72,18 @@
 
 <script>
   const optionalScripts = [];
-  {{- $currentLang := $.Site.Language.Lang -}} {{- $data := index $.Site.Data $currentLang "consent" "items" -}} {{- range $index, $item := where $data "is_functional" "eq" false -}} {{- $script_file := resources.Get (printf "js/%s" $item.script_file) -}} {{- $script_file = $script_file | resources.ExecuteAsTemplate "js/appearance.js" . | resources.Minify | resources.Fingerprint "sha512" -}}
-  optionalScripts[{{- $index -}}] = "{{- $script_file.RelPermalink -}}"; {{- end -}}
   const functionalScripts = [];
-  {{- $currentLang := $.Site.Language.Lang -}} {{- $data := index $.Site.Data $currentLang "consent" "items" -}} {{- range $index, $item := where $data "is_functional" "eq" true -}} {{- $script_file := resources.Get (printf "js/%s" $item.script_file) -}} {{- $script_file = $script_file | resources.ExecuteAsTemplate "js/appearance.js" . | resources.Minify | resources.Fingerprint "sha512" -}}
-  functionalScripts[{{- $index -}}] = "{{- $script_file.RelPermalink -}}"; {{- end -}}
+  {{- $currentLang := $.Site.Language.Lang -}}
+  {{- $data := index $.Site.Data $currentLang "consent" "items" -}}
+  {{- range $index, $item := $data -}}
+      {{- $script_file := resources.Get (printf "js/%s" $item.script_file) -}}
+      {{- $script_file = $script_file | resources.ExecuteAsTemplate (printf "js/%s" $item.script_file) . | resources.Minify | resources.Fingerprint "sha512" -}}
+      {{- if $item.is_functional -}}
+          functionalScripts[{{- $index -}}] = "{{- $script_file.RelPermalink -}}";
+      {{- else -}}
+          optionalScripts[{{- $index -}}] = "{{- $script_file.RelPermalink -}}";
+      {{- end -}}
+  {{- end -}}
 </script>
 {{- $consent := resources.Get "js/consent.js" | minify | fingerprint -}}
 <script src="{{- $consent.RelPermalink -}}"></script>
