@@ -99,7 +99,7 @@ function activateWithParent(element) {
 function deactivateWithParent(element) {
   element.classList.remove("active");
   element.parentElement.classList.remove("active");
-  window.location.hash = "#consent-overlay-exit";
+  window.location.hash = "#consent-exit";
 }
 
 // Load functional javascript
