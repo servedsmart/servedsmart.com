@@ -99,6 +99,7 @@ function activateWithParent(element) {
 function deactivateWithParent(element) {
   element.classList.remove("active");
   element.parentElement.classList.remove("active");
+  window.location.hash = "";
 }
 
 // Load functional javascript
