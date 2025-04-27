@@ -11,22 +11,10 @@
 [[items]]
 title = "Aussehen"
 description = "Dieser Code erlaubt Nutzern, zwischen einem hellen und dunklen Website-Aussehen zu wechseln. Datenwert 'appearance' wird gespeichert in localStorage."
-is_functional = true
+is_functional = false
 script_file = "consent-appearance.js"
 
 [[items]]
 title = "Zustimmungseinstellungen"
 description = "Diese Daten erlauben uns, die Zustimmungseinstellungen des Nutzers zu lesen. Datenwert 'consent-settings' wird gespeichert in localStorage."
 is_functional = true
-
-[[items]]
-title = "test0-de"
-description = "test0-de-description"
-is_functional = true
-script_file = "consent-test0.js"
-
-[[items]]
-title = "test1-de"
-description = "test1-de-description"
-is_functional = true
-script_file = "consent-test1.js"
