@@ -11,7 +11,7 @@
 [[items]]
 title = "Appearance"
 description = "This code gives users the ability to switch between a dark and a light website theme. Data 'appearance' will be saved to localStorage."
-is_functional = false
+is_functional = true
 script_file = "consent-appearance.js"
 
 [[items]]
@@ -22,7 +22,7 @@ is_functional = true
 [[items]]
 title = "test0"
 description = "test0-description"
-is_functional = false
+is_functional = true
 script_file = "consent-test0.js"
 
 [[items]]

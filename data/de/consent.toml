@@ -11,7 +11,7 @@
 [[items]]
 title = "Aussehen"
 description = "Dieser Code erlaubt Nutzern, zwischen einem hellen und dunklen Website-Aussehen zu wechseln. Datenwert 'appearance' wird gespeichert in localStorage."
-is_functional = false
+is_functional = true
 script_file = "consent-appearance.js"
 
 [[items]]
@@ -22,7 +22,7 @@ is_functional = true
 [[items]]
 title = "test0-de"
 description = "test0-de-description"
-is_functional = false
+is_functional = true
 script_file = "consent-test0.js"
 
 [[items]]
