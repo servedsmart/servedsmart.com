@@ -139,3 +139,9 @@ document
       deactivateWithParent(this);
     }
   });
+// Open consent-overlay if hash is #consent-settings
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.location.hash === "#consent-settings") {
+    activateWithParent(document.getElementById("consent-overlay"));
+  }
+});
