@@ -48,7 +48,7 @@ function loadJS(scripts, consentValue) {
     ) {
       return;
     }
-    if (consentValue[key] == "1") {
+    if (consentValue[key] === "1") {
       let s = document.createElement("script");
       s.type = "text/javascript";
       s.src = value;
@@ -62,7 +62,7 @@ function setConsentInputs(consentValue) {
     "#consent-overlay input:not([disabled])"
   );
   elements.forEach(function (el, index) {
-    if (consentValue[index] == "1") el.checked = true;
+    if (consentValue[index] === "1") el.checked = true;
     else el.checked = false;
   });
 }
