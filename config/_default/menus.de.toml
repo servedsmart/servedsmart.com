@@ -97,4 +97,4 @@ weight = 82
 
 [[footer]]
 name = "Zustimmungseinstellungen"
-url = "#consent-settings"
+url = "#consent-overlay"
