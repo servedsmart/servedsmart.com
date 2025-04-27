@@ -8,7 +8,7 @@
 -------
  -->
 
-<head>
+ <head>
   <meta charset="utf-8" />
   {{ with .Site.Language.Params.htmlCode | default .Site.LanguageCode }}
   <meta http-equiv="content-language" content="{{ . }}" />
@@ -59,6 +59,10 @@
   "sha512" }}
   <link type="text/css" rel="stylesheet" href="{{ $bundleCSS.RelPermalink }}"
     integrity="{{ $bundleCSS.Data.Integrity }}" />
+  {{ $jsAppearance := resources.Get "js/appearance.js" }}
+  {{ $jsAppearance = $jsAppearance | resources.ExecuteAsTemplate "js/appearance.js" . | resources.Minify | resources.Fingerprint "sha512" }}
+  <script type="text/javascript" src="{{ $jsAppearance.RelPermalink }}"
+    integrity="{{ $jsAppearance.Data.Integrity }}"></script>
   {{ if .Site.Params.enableSearch | default false }}
   {{ $jsFuse := resources.Get "lib/fuse/fuse.min.js" }}
   {{ $jsSearch := resources.Get "js/search.js" }}
