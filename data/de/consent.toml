@@ -9,24 +9,24 @@
 ###
 
 [[items]]
-title = 'Aussehen'
+title = "Aussehen"
 description = "Dieser Code erlaubt Nutzern, zwischen einem hellen und dunklen Website-Aussehen zu wechseln. Cookie 'appearance' wird gespeichert in localStorage."
 is_functional = false
-script_file = 'consent-appearance.js'
+script_file = "consent-appearance.js"
 
 [[items]]
-title = 'Cookie Einstellungen'
+title = "Cookie Einstellungen"
 description = "Dieser Cookie erlaubt uns, die Cookie Einstellungen des Nutzers zu lesen. Cookie 'consent-settings' wird gespeichert in localStorage."
 is_functional = true
 
 [[items]]
-title = 'test0-de'
-description = 'test0-de-description'
+title = "test0-de"
+description = "test0-de-description"
 is_functional = false
-script_file = 'consent-test0.js'
+script_file = "consent-test0.js"
 
 [[items]]
-title = 'test1-de'
-description = 'test1-de-description'
+title = "test1-de"
+description = "test1-de-description"
 is_functional = true
-script_file = 'consent-test1.js'
+script_file = "consent-test1.js"
