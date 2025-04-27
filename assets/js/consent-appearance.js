@@ -8,42 +8,40 @@
  * -----
  */
 
-window.addEventListener("DOMContentLoaded", (event) => {
-  const switcher = document.getElementById("appearance-switcher");
-  const switcherMobile = document.getElementById("appearance-switcher-mobile");
+const switcher = document.getElementById("appearance-switcher");
+const switcherMobile = document.getElementById("appearance-switcher-mobile");
 
-  console.log("switcher: " + switcher);
-  console.log("switcherMobile: " + switcherMobile);
-  updateMeta();
-  this.updateLogo?.(getTargetAppearance());
+console.log("switcher: " + switcher);
+console.log("switcherMobile: " + switcherMobile);
+updateMeta();
+this.updateLogo?.(getTargetAppearance());
 
-  if (switcher) {
-    switcher.addEventListener("click", () => {
-      document.documentElement.classList.toggle("dark");
-      var targetAppearance = getTargetAppearance();
-      localStorage.setItem("appearance", targetAppearance);
-      updateMeta();
-      this.updateLogo?.(targetAppearance);
-    });
-    switcher.addEventListener("contextmenu", (event) => {
-      event.preventDefault();
-      localStorage.removeItem("appearance");
-    });
-  }
-  if (switcherMobile) {
-    switcherMobile.addEventListener("click", () => {
-      document.documentElement.classList.toggle("dark");
-      var targetAppearance = getTargetAppearance();
-      localStorage.setItem("appearance", targetAppearance);
-      updateMeta();
-      this.updateLogo?.(targetAppearance);
-    });
-    switcherMobile.addEventListener("contextmenu", (event) => {
-      event.preventDefault();
-      localStorage.removeItem("appearance");
-    });
-  }
-});
+if (switcher) {
+  switcher.addEventListener("click", () => {
+    document.documentElement.classList.toggle("dark");
+    var targetAppearance = getTargetAppearance();
+    localStorage.setItem("appearance", targetAppearance);
+    updateMeta();
+    this.updateLogo?.(targetAppearance);
+  });
+  switcher.addEventListener("contextmenu", (event) => {
+    event.preventDefault();
+    localStorage.removeItem("appearance");
+  });
+}
+if (switcherMobile) {
+  switcherMobile.addEventListener("click", () => {
+    document.documentElement.classList.toggle("dark");
+    var targetAppearance = getTargetAppearance();
+    localStorage.setItem("appearance", targetAppearance);
+    updateMeta();
+    this.updateLogo?.(targetAppearance);
+  });
+  switcherMobile.addEventListener("contextmenu", (event) => {
+    event.preventDefault();
+    localStorage.removeItem("appearance");
+  });
+}
 
 var updateMeta = () => {
   var elem, style;
