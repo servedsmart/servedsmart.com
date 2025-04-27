@@ -26,6 +26,7 @@ function loadOptionalJS(consentValue) {
 }
 // Load funcional javascript
 function loadFunctionalJS() {
+  localStorage.setItem("consent-settings", "");
   let consentValue = "";
   functionalScripts.forEach(function () {
     consentValue = consentValue + "1";
