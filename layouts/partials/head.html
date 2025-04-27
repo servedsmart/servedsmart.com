@@ -85,6 +85,8 @@
   {{ $zoomJS := resources.Get "lib/zoom/zoom.min.js" | resources.Fingerprint "sha512" }}
   <script src="{{ $zoomJS.RelPermalink }}" integrity="{{ $zoomJS.Data.Integrity }}"></script>
   {{ end }}
+  {{- /* Cookie consent notice */ -}}
+  {{- partial "consent.html" . -}}
   {{/* Icons */}}
   {{ if templates.Exists "partials/favicons.html" }}
   {{ partialCached "favicons.html" .Site }}
