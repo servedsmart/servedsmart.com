@@ -11,8 +11,8 @@
 {{- $style := resources.Get "css/consent.css" | minify | fingerprint -}}
 <link rel="stylesheet" href="{{- $style.Permalink -}}" />
 
-<div id="consent-notice-container" class="active">
-  <div id="consent-notice" class="active">
+<div id="consent-notice-container">
+  <div id="consent-notice">
     <span
       >{{- T "consent-text-start" -}}<a
         class="manage-consent"
