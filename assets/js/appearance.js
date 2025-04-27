@@ -39,44 +39,6 @@ if (document.documentElement.getAttribute("data-auto-appearance") === "true") {
     });
 }
 
-var updateMeta = () => {
-  var elem, style;
-  elem = document.querySelector("body");
-  style = getComputedStyle(elem);
-  document
-    .querySelector('meta[name="theme-color"]')
-    .setAttribute("content", style.backgroundColor);
-};
-
-{{ if and (.Site.Params.Logo) (.Site.Params.SecondaryLogo) }}
-{{ $primaryLogo := resources.Get .Site.Params.Logo }}
-{{ $secondaryLogo := resources.Get .Site.Params.SecondaryLogo }}
-{{ if and ($primaryLogo) ($secondaryLogo) }}
-var updateLogo = (targetAppearance) => {
-  var imgElems = document.querySelectorAll("img.logo");
-  var logoContainers = document.querySelectorAll("span.logo");
-
-  targetLogoPath =
-    targetAppearance == "{{ .Site.Params.DefaultAppearance }}"
-      ? "{{ $primaryLogo.RelPermalink }}"
-      : "{{ $secondaryLogo.RelPermalink }}";
-  for (const elem of imgElems) {
-    elem.setAttribute("src", targetLogoPath);
-  }
-
-  {{ if eq $primaryLogo.MediaType.SubType "svg" }}
-  targetContent =
-    targetAppearance == "{{ .Site.Params.DefaultAppearance }}"
-      ? `{{ $primaryLogo.Content | safeHTML }}`
-      : `{{ $secondaryLogo.Content | safeHTML }}`;
-  for (const container of logoContainers) {
-    container.innerHTML = targetContent;
-  }
-  {{ end }}
-};
-{{ end }}
-{{- end }}
-
 window.addEventListener("DOMContentLoaded", (event) => {
   const scroller = document.getElementById("top-scroller");
   const footer = document.getElementById("site-footer");
