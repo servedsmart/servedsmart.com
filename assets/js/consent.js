@@ -99,7 +99,7 @@ function activateWithParent(element) {
 function deactivateWithParent(element) {
   element.classList.remove("active");
   element.parentElement.classList.remove("active");
-  window.location.hash = "";
+  window.location.hash = "#consent-overlay-exit";
 }
 
 // Load functional javascript
@@ -112,7 +112,6 @@ setUnchecked(
 
 // Open consent-overlay if hash is #consent-overlay
 window.onhashchange = function () {
-  console.log(window.location.hash);
   if (window.location.hash === "#consent-overlay") {
     activateWithParent(document.getElementById("consent-overlay"));
   }
