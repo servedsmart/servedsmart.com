@@ -26,7 +26,7 @@ function loadOptionalJS(consentValue) {
 }
 // Load funcional javascript
 function loadFunctionalJS() {
-  localStorage.setItem("consent-settings", "");
+  localStorage.setItem("consent-settings", "0");
   let consentValue = "";
   functionalScripts.forEach(function () {
     consentValue = consentValue + "1";
@@ -35,7 +35,7 @@ function loadFunctionalJS() {
 }
 // Load javascript
 function loadJS(scripts, consentValue) {
-  if (consentValue == "") {
+  if (consentValue == "0") {
     return;
   }
   const documentScripts = Array.from(document.querySelectorAll("script")).map(
