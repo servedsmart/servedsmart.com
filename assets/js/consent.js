@@ -109,6 +109,13 @@ setUnchecked(
   document.querySelectorAll("#consent-overlay input:not([disabled])")
 );
 
+// Open consent-overlay if hash is #consent-overlay
+document.addEventListener("hashchange", function () {
+  if (window.location.hash === "#consent-overlay") {
+    activateWithParent(document.getElementById("consent-overlay"));
+  }
+});
+
 // Load javascript if user has consented or show notice
 if (localStorage.getItem("consent-settings")) {
   const consentValue = localStorage.getItem("consent-settings");
@@ -139,9 +146,3 @@ document
       deactivateWithParent(this);
     }
   });
-// Open consent-overlay if hash is #consent-overlay
-document.addEventListener("DOMContentLoaded", function () {
-  if (window.location.hash === "#consent-overlay") {
-    activateWithParent(document.getElementById("consent-overlay"));
-  }
-});
