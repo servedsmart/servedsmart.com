@@ -78,9 +78,9 @@
       {{- $script_file := resources.Get (printf "js/%s" .script_file) -}}
       {{- $script_file = $script_file | resources.ExecuteAsTemplate (printf "js/%s" .script_file) . | resources.Minify | resources.Fingerprint "sha512" -}}
       {{- if .is_functional -}}
-          functionalScripts.push("{{- $script_file.RelPermalink -}}")
+          functionalScripts.push("{{- $script_file.RelPermalink -}}");
       {{- else -}}
-          optionalScripts.push("{{- $script_file.RelPermalink -}}")
+          optionalScripts.push("{{- $script_file.RelPermalink -}}");
       {{- end -}}
   {{- end -}}
 </script>
