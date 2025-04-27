@@ -8,31 +8,6 @@
  * -----
  */
 
-// Create cookie, stores accepted as 1 and not accepted as 0 in a single string
-function createCookie(name, value, days) {
-  let expires = "";
-  if (days) {
-    const date = new Date();
-    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-    expires = "; expires=" + date.toUTCString();
-  }
-  document.cookie = name + "=" + value + expires + "; path=/";
-}
-// Read cookie and return formatted output
-function readCookie(name) {
-  const nameEQ = name + "=";
-  const ca = document.cookie.split(";");
-  for (let i = 0; i < ca.length; i++) {
-    const c = ca[i];
-    while (c.charAt(0) == " ") c = c.substring(1, c.length);
-    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-  }
-  return null;
-}
-// Erase cookie
-function eraseCookie(name) {
-  createCookie(name, "", -1);
-}
 // Modify all consent scripts, string should be either "0" or "1"
 function modifyAllConsent(scripts, string) {
   let consentValue = "";
@@ -44,7 +19,7 @@ function modifyAllConsent(scripts, string) {
 // Load optional javascript
 function loadOptionalJS(consentValue) {
   setConsentInputs(consentValue);
-  createCookie("consent-settings", consentValue, 31);
+  localStorage.setItem("consent-settings", value);
   deactivateWithParent(document.getElementById("consent-notice"));
   deactivateWithParent(document.getElementById("consent-overlay"));
   loadJS(optionalScripts, consentValue);
@@ -131,8 +106,8 @@ setUnchecked(
 );
 
 // Load javascript if user has consented or show notice
-if (readCookie("consent-settings")) {
-  const consentValue = readCookie("consent-settings").toString();
+if (localStorage.getItem("consent-settings")) {
+  const consentValue = localStorage.getItem("consent-settings");
   setConsentInputs(consentValue);
   loadJS(optionalScripts, consentValue);
 } else {
