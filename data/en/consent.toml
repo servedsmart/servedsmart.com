@@ -10,9 +10,14 @@
 
 [[items]]
 title = 'Appearance'
-description = 'This code gives users the ability to switch between a dark and a light website theme.'
+description = "This code gives users the ability to switch between a dark and a light website theme. Cookie 'appearance' will be saved to localStorage."
 is_functional = false
 script_file = 'consent-appearance.js'
+
+[[items]]
+title = 'Consent Settings'
+description = "This cookie allows us to read a user's consent settings. Cookie 'consent-settings' will be saved to localStorage."
+is_functional = true
 
 [[items]]
 title = 'test0'
