@@ -8,6 +8,21 @@
  * -----
  */
 
+// Set localStorage
+function setLocalStorage(consentValue) {
+  localStorage.setItem("optional-scripts", optionalScripts.toString());
+  localStorage.setItem("consent-settings", consentValue);
+}
+// Get from localStorage and remove if optionalScripts don't match
+function getLocalStorageOrRemove() {
+  if (localStorage.getItem("optional-scripts") === optionalScripts.toString()) {
+    return localStorage.getItem("consent-settings");
+  } else {
+    localStorage.removeItem("optional-scripts");
+    localStorage.removeItem("consent-settings");
+    return null;
+  }
+}
 // Modify all consent scripts, string should be either "0" or "1"
 function modifyAllConsent(scripts, string) {
   let consentValue = "";
@@ -21,11 +36,11 @@ function loadOptionalJS(consentValue) {
   deactivateWithParent(document.getElementById("consent-notice"));
   deactivateWithParent(document.getElementById("consent-overlay"));
   if (!consentValue) {
-    localStorage.setItem("consent-settings", "0");
+    setLocalStorage("0");
     return;
   }
   setConsentInputs(consentValue);
-  localStorage.setItem("consent-settings", consentValue);
+  setLocalStorage(consentValue);
   loadJS(optionalScripts, consentValue);
 }
 // Load funcional javascript
@@ -118,8 +133,8 @@ window.onhashchange = function () {
 };
 
 // Load javascript if user has consented or show notice
-if (localStorage.getItem("consent-settings")) {
-  const consentValue = localStorage.getItem("consent-settings");
+if (getLocalStorageOrRemove()) {
+  const consentValue = getLocalStorageOrRemove();
   setConsentInputs(consentValue);
   loadJS(optionalScripts, consentValue);
 } else {
