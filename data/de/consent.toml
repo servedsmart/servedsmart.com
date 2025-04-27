@@ -10,13 +10,13 @@
 
 [[items]]
 title = "Aussehen"
-description = "Dieser Code erlaubt Nutzern, zwischen einem hellen und dunklen Website-Aussehen zu wechseln. Cookie 'appearance' wird gespeichert in localStorage."
+description = "Dieser Code erlaubt Nutzern, zwischen einem hellen und dunklen Website-Aussehen zu wechseln. Datenwert 'appearance' wird gespeichert in localStorage."
 is_functional = false
 script_file = "consent-appearance.js"
 
 [[items]]
-title = "Cookie Einstellungen"
-description = "Dieser Cookie erlaubt uns, die Cookie Einstellungen des Nutzers zu lesen. Cookie 'consent-settings' wird gespeichert in localStorage."
+title = "Zustimmungseinstellungen"
+description = "Diese Daten erlauben uns, die Zustimmungseinstellungen des Nutzers zu lesen. Datenwert 'consent-settings' wird gespeichert in localStorage."
 is_functional = true
 
 [[items]]

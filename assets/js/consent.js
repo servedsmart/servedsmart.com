@@ -118,7 +118,7 @@ if (localStorage.getItem("consent-settings")) {
   activateWithParent(document.getElementById("consent-notice"));
 }
 // Handle consent buttons
-addClickExec(document.querySelectorAll(".manage-consent"), function () {
+addClickExec(document.querySelectorAll(".consent-settings"), function () {
   activateWithParent(document.getElementById("consent-overlay"));
 });
 addClickExec(document.querySelectorAll(".deny-consent"), function () {

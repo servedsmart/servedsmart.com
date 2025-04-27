@@ -96,5 +96,5 @@ pageRef = '/terms/privacy-policy/'
 weight = 82
 
 [[footer]]
-name = "Manage consent"
-url = "#manage-consent"
+name = "Consent Settings"
+url = "#consent-settings"
