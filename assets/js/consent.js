@@ -110,12 +110,12 @@ setUnchecked(
 );
 
 // Open consent-overlay if hash is #consent-overlay
-document.addEventListener("hashchange", function () {
+window.onhashchange = function () {
   console.log(window.location.hash);
   if (window.location.hash === "#consent-overlay") {
     activateWithParent(document.getElementById("consent-overlay"));
   }
-});
+};
 
 // Load javascript if user has consented or show notice
 if (localStorage.getItem("consent-settings")) {
