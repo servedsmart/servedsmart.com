@@ -17,7 +17,6 @@
 #consent-overlay-container,
 #consent-notice,
 #consent-overlay {
-  z-index: 999;
   display: none;
   text-decoration: none;
 }
