@@ -35,6 +35,9 @@ function loadFunctionalJS() {
 }
 // Load javascript
 function loadJS(scripts, consentValue) {
+  if (consentValue == "") {
+    return;
+  }
   const documentScripts = Array.from(document.querySelectorAll("script")).map(
     (scr) => scr.src
   );
