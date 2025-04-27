@@ -8,6 +8,24 @@
  * -----
  */
 
+function waitForReadyState(fn) {
+  if (
+    document.readyState === "interactive" ||
+    document.readyState === "complete"
+  ) {
+    fn();
+  } else {
+    const intervalId = setInterval(() => {
+      if (
+        document.readyState === "interactive" ||
+        document.readyState === "complete"
+      ) {
+        fn();
+        clearInterval(intervalId);
+      }
+    }, 100);
+  }
+}
 var updateMeta = () => {
   var elem, style;
   elem = document.querySelector("body");
@@ -50,37 +68,38 @@ var getTargetAppearance = () => {
   return document.documentElement.classList.contains("dark") ? "dark" : "light";
 };
 
-const switcher = document.getElementById("appearance-switcher");
-const switcherMobile = document.getElementById("appearance-switcher-mobile");
+// Usage
+waitForReadyState(() => {
+  const switcher = document.getElementById("appearance-switcher");
+  const switcherMobile = document.getElementById("appearance-switcher-mobile");
 
-console.log("switcher: " + switcher);
-console.log("switcherMobile: " + switcherMobile);
-updateMeta();
-this.updateLogo?.(getTargetAppearance());
+  updateMeta();
+  this.updateLogo?.(getTargetAppearance());
 
-if (switcher) {
-  switcher.addEventListener("click", () => {
-    document.documentElement.classList.toggle("dark");
-    var targetAppearance = getTargetAppearance();
-    localStorage.setItem("appearance", targetAppearance);
-    updateMeta();
-    this.updateLogo?.(targetAppearance);
-  });
-  switcher.addEventListener("contextmenu", (event) => {
-    event.preventDefault();
-    localStorage.removeItem("appearance");
-  });
-}
-if (switcherMobile) {
-  switcherMobile.addEventListener("click", () => {
-    document.documentElement.classList.toggle("dark");
-    var targetAppearance = getTargetAppearance();
-    localStorage.setItem("appearance", targetAppearance);
-    updateMeta();
-    this.updateLogo?.(targetAppearance);
-  });
-  switcherMobile.addEventListener("contextmenu", (event) => {
-    event.preventDefault();
-    localStorage.removeItem("appearance");
-  });
-}
+  if (switcher) {
+    switcher.addEventListener("click", () => {
+      document.documentElement.classList.toggle("dark");
+      var targetAppearance = getTargetAppearance();
+      localStorage.setItem("appearance", targetAppearance);
+      updateMeta();
+      this.updateLogo?.(targetAppearance);
+    });
+    switcher.addEventListener("contextmenu", (event) => {
+      event.preventDefault();
+      localStorage.removeItem("appearance");
+    });
+  }
+  if (switcherMobile) {
+    switcherMobile.addEventListener("click", () => {
+      document.documentElement.classList.toggle("dark");
+      var targetAppearance = getTargetAppearance();
+      localStorage.setItem("appearance", targetAppearance);
+      updateMeta();
+      this.updateLogo?.(targetAppearance);
+    });
+    switcherMobile.addEventListener("contextmenu", (event) => {
+      event.preventDefault();
+      localStorage.removeItem("appearance");
+    });
+  }
+});
