@@ -18,6 +18,10 @@ function modifyAllConsent(scripts, string) {
 }
 // Load optional javascript
 function loadOptionalJS(consentValue) {
+  if (!consentValue) {
+    localStorage.setItem("consent-settings", "0");
+    return;
+  }
   setConsentInputs(consentValue);
   localStorage.setItem("consent-settings", consentValue);
   deactivateWithParent(document.getElementById("consent-notice"));
@@ -26,7 +30,6 @@ function loadOptionalJS(consentValue) {
 }
 // Load funcional javascript
 function loadFunctionalJS() {
-  localStorage.setItem("consent-settings", "0");
   let consentValue = "";
   functionalScripts.forEach(function () {
     consentValue = consentValue + "1";
@@ -35,9 +38,6 @@ function loadFunctionalJS() {
 }
 // Load javascript
 function loadJS(scripts, consentValue) {
-  if (consentValue == "0") {
-    return;
-  }
   const documentScripts = Array.from(document.querySelectorAll("script")).map(
     (scr) => scr.src
   );
