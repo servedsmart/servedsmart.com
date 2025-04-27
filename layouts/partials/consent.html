@@ -74,14 +74,13 @@
   const optionalScripts = [];
   const functionalScripts = [];
   {{- $currentLang := $.Site.Language.Lang -}}
-  {{- $data := index $.Site.Data $currentLang "consent" "items" -}}
-  {{- range $index, $item := $data -}}
-      {{- $script_file := resources.Get (printf "js/%s" $item.script_file) -}}
-      {{- $script_file = $script_file | resources.ExecuteAsTemplate (printf "js/%s" $item.script_file) . | resources.Minify | resources.Fingerprint "sha512" -}}
-      {{- if $item.is_functional -}}
-          functionalScripts[{{- $index -}}] = "{{- $script_file.RelPermalink -}}";
+  {{- range index $.Site.Data $currentLang "consent" "items" -}}
+      {{- $script_file := resources.Get (printf "js/%s" .script_file) -}}
+      {{- $script_file = $script_file | resources.ExecuteAsTemplate (printf "js/%s" .script_file) . | resources.Minify | resources.Fingerprint "sha512" -}}
+      {{- if .is_functional -}}
+          functionalScripts.push("{{- $script_file.RelPermalink -}}")
       {{- else -}}
-          optionalScripts[{{- $index -}}] = "{{- $script_file.RelPermalink -}}";
+          optionalScripts.push("{{- $script_file.RelPermalink -}}")
       {{- end -}}
   {{- end -}}
 </script>
