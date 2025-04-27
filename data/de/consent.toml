@@ -12,7 +12,7 @@
 title = 'Aussehen'
 description = 'Dieser Code erlaubt Nutzern, zwischen einem hellen und dunklen Website-Aussehen zu wechseln.'
 is_functional = false
-script_file = 'consent-appearance.js'
+script_file = 'appearance.js'
 
 [[items]]
 title = 'test0-de'
