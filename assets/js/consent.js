@@ -91,7 +91,8 @@ function setConsentValue() {
     if (el.checked) consentValue = consentValue + "1";
     else consentValue = consentValue + "0";
   });
-  document.getElementById("save-consent").dataset.consentvalue = consentValue;
+  document.getElementById("consent-settings-confirm").dataset.consentvalue =
+    consentValue;
 }
 // Set all elements unchecked
 function setUnchecked(elements) {
@@ -144,16 +145,18 @@ if (getLocalStorageOrRemove()) {
 addClickExec(document.querySelectorAll(".consent-settings"), function () {
   window.location.href = "#consent-overlay";
 });
-addClickExec(document.querySelectorAll(".deny-consent"), function () {
+addClickExec(document.querySelectorAll(".consent-deny-all"), function () {
   modifyAllConsent(optionalScripts, "0");
 });
-addClickExec(document.querySelectorAll(".approve-consent"), function () {
+addClickExec(document.querySelectorAll(".consent-accept-all"), function () {
   modifyAllConsent(optionalScripts, "1");
 });
-document.getElementById("save-consent").addEventListener("click", function () {
-  setConsentValue();
-  loadOptionalJS(this.dataset.consentvalue);
-});
+document
+  .getElementById("consent-settings-confirm")
+  .addEventListener("click", function () {
+    setConsentValue();
+    loadOptionalJS(this.dataset.consentvalue);
+  });
 // Remove active attribute if clicking outside of div
 document
   .getElementById("consent-overlay")

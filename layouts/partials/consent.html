@@ -14,17 +14,16 @@
 <div id="consent-notice-container">
   <div id="consent-notice">
     <span
-      >{{- T "consent-text-start" -}}<a
-        href="#consent-overlay"
+      >{{- T "consent-text-start" -}}<a href="#consent-overlay"
         >{{- T "consent-text-href" -}}</a
       >{{- T "consent-text-end" -}}</span
     ><br />
-    <button class="btn consent-settings">
-      {{- T "consent-button-consent-settings" -}}</button
-    ><button class="btn deny-consent">
-      {{- T "consent-button-deny-consent" -}}</button
-    ><button class="btn approve-consent">
-      {{- T "consent-button-approve-consent" -}}
+    <button class="btn consent-deny-all">
+      {{- T "consent-button-consent-deny-all" -}}</button
+    ><button class="btn consent-accept-all">
+      {{- T "consent-button-consent-accept-all" -}}</button
+    ><button class="btn consent-settings">
+      {{- T "consent-button-consent-settings" -}}
     </button>
   </div>
 </div>
@@ -55,14 +54,16 @@
       </div>
       {{- end -}}
       <div>
-        <button
-          id="save-consent"
-          class="btn save-consent"
+        <button class="btn consent-deny-all">
+          {{- T "consent-button-consent-deny-all" -}}</button
+        ><button class="btn consent-accept-all">
+          {{- T "consent-button-consent-accept-all" -}}</button
+        ><button
+          id="consent-settings-confirm"
+          class="btn consent-settings-confirm"
           data-consentvalue="{{ $currentLang := $.Site.Language.Lang }}{{ $data := index $.Site.Data $currentLang `consent` `items` }}{{ range $data }}{{ if .is_functional}}{{ else }}0{{ end }}{{ end }}"
         >
-          {{- T "consent-button-save-consent" -}}</button
-        ><button class="btn approve-consent">
-          {{- T "consent-button-approve-consent" -}}
+          {{- T "consent-button-consent-settings-confirm" -}}
         </button>
       </div>
     </div>
