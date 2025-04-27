@@ -4,44 +4,9 @@
  * -----
  * Copyright (c) 2025 Leopold Meinel & contributors
  * SPDX ID = MIT
- * URL = https://opensource.org/licenses/MIT
+ * URL = https:opensource.org/licenses/MIT
  * -----
  */
-
-const switcher = document.getElementById("appearance-switcher");
-const switcherMobile = document.getElementById("appearance-switcher-mobile");
-
-console.log("switcher: " + switcher);
-console.log("switcherMobile: " + switcherMobile);
-updateMeta();
-this.updateLogo?.(getTargetAppearance());
-
-if (switcher) {
-  switcher.addEventListener("click", () => {
-    document.documentElement.classList.toggle("dark");
-    var targetAppearance = getTargetAppearance();
-    localStorage.setItem("appearance", targetAppearance);
-    updateMeta();
-    this.updateLogo?.(targetAppearance);
-  });
-  switcher.addEventListener("contextmenu", (event) => {
-    event.preventDefault();
-    localStorage.removeItem("appearance");
-  });
-}
-if (switcherMobile) {
-  switcherMobile.addEventListener("click", () => {
-    document.documentElement.classList.toggle("dark");
-    var targetAppearance = getTargetAppearance();
-    localStorage.setItem("appearance", targetAppearance);
-    updateMeta();
-    this.updateLogo?.(targetAppearance);
-  });
-  switcherMobile.addEventListener("contextmenu", (event) => {
-    event.preventDefault();
-    localStorage.removeItem("appearance");
-  });
-}
 
 var updateMeta = () => {
   var elem, style;
@@ -84,3 +49,38 @@ var updateLogo = (targetAppearance) => {
 var getTargetAppearance = () => {
   return document.documentElement.classList.contains("dark") ? "dark" : "light";
 };
+
+const switcher = document.getElementById("appearance-switcher");
+const switcherMobile = document.getElementById("appearance-switcher-mobile");
+
+console.log("switcher: " + switcher);
+console.log("switcherMobile: " + switcherMobile);
+updateMeta();
+this.updateLogo?.(getTargetAppearance());
+
+if (switcher) {
+  switcher.addEventListener("click", () => {
+    document.documentElement.classList.toggle("dark");
+    var targetAppearance = getTargetAppearance();
+    localStorage.setItem("appearance", targetAppearance);
+    updateMeta();
+    this.updateLogo?.(targetAppearance);
+  });
+  switcher.addEventListener("contextmenu", (event) => {
+    event.preventDefault();
+    localStorage.removeItem("appearance");
+  });
+}
+if (switcherMobile) {
+  switcherMobile.addEventListener("click", () => {
+    document.documentElement.classList.toggle("dark");
+    var targetAppearance = getTargetAppearance();
+    localStorage.setItem("appearance", targetAppearance);
+    updateMeta();
+    this.updateLogo?.(targetAppearance);
+  });
+  switcherMobile.addEventListener("contextmenu", (event) => {
+    event.preventDefault();
+    localStorage.removeItem("appearance");
+  });
+}
