@@ -19,7 +19,7 @@ function modifyAllConsent(scripts, string) {
 // Load optional javascript
 function loadOptionalJS(consentValue) {
   setConsentInputs(consentValue);
-  localStorage.setItem("consent-settings", value);
+  localStorage.setItem("consent-settings", consentValue);
   deactivateWithParent(document.getElementById("consent-notice"));
   deactivateWithParent(document.getElementById("consent-overlay"));
   loadJS(optionalScripts, consentValue);
