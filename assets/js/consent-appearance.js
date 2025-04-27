@@ -42,3 +42,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
   }
 });
+
+var getTargetAppearance = () => {
+  return document.documentElement.classList.contains("dark") ? "dark" : "light";
+};

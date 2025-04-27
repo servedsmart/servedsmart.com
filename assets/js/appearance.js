@@ -77,10 +77,6 @@ var updateLogo = (targetAppearance) => {
 {{ end }}
 {{- end }}
 
-var getTargetAppearance = () => {
-  return document.documentElement.classList.contains("dark") ? "dark" : "light";
-};
-
 window.addEventListener("DOMContentLoaded", (event) => {
   const scroller = document.getElementById("top-scroller");
   const footer = document.getElementById("site-footer");
