@@ -1,5 +1,5 @@
 ###
-# File = consent copy 2.toml
+# File = consent.toml
 # Author = Leopold Meinel (leo@meinel.dev)
 # -----
 # Copyright (c) 2025 Leopold Meinel & contributors
@@ -12,7 +12,7 @@
 title = 'Aussehen'
 description = 'Dieser Code erlaubt Nutzern, zwischen einem hellen und dunklen Website-Aussehen zu wechseln.'
 is_functional = false
-script_file = 'appearance.js'
+script_file = 'consent-appearance.js'
 
 [[items]]
 title = 'test0-de'
