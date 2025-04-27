@@ -64,7 +64,6 @@ function loadJS(scripts, consentValue) {
   );
   scripts.forEach(function (value, key) {
     if (
-
       documentScripts.includes(value) ||
       documentScripts.includes(window.location.origin + value)
     ) {
