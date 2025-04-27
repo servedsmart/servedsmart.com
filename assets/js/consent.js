@@ -126,7 +126,7 @@ if (localStorage.getItem("consent-settings")) {
 }
 // Handle consent buttons
 addClickExec(document.querySelectorAll(".consent-settings"), function () {
-  activateWithParent(document.getElementById("consent-overlay"));
+  window.location.href = "#consent-overlay";
 });
 addClickExec(document.querySelectorAll(".deny-consent"), function () {
   modifyAllConsent(optionalScripts, "0");
