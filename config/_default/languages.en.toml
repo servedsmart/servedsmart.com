@@ -9,8 +9,8 @@ displayName = "EN"
 isoCode = "en"
 rtl = false
 dateFormat = "02 January 2006"
-# logo = "img/logo-optimized.svg"
-# secondaryLogo = "img/secondary-logo.png"
+# logo = "/img/logo-optimized.svg"
+# secondaryLogo = "/img/secondary-logo.png"
 description = "Take digitalization into your own hands - easy and stress-free! Services available in Berlin, Germany."
 # copyright = "Copy, _right?_ :thinking_face:"
 

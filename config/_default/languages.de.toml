@@ -9,8 +9,8 @@ displayName = "DE"
 isoCode = "de"
 rtl = false
 dateFormat = "02. January 2006"
-# logo = "img/logo-optimized.svg"
-# secondaryLogo = "img/secondary-logo.png"
+# logo = "/img/logo-optimized.svg"
+# secondaryLogo = "/img/secondary-logo.png"
 description = "Nehmen Sie die Digitalisierung selbst in die Hand - einfach und unkompliziert! Für Kunden in Berlin."
 # copyright = "Copy, _right?_ :thinking_face:"
 
