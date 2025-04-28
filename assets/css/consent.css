@@ -9,9 +9,16 @@
  */
 
 :root {
-  --form-control-color: rgb(var(--color-secondary-500));
-  --form-control-disabled: rgb(var(--color-primary-700));
-  --form-background: rgb(var(--color-neutral));
+  --color-consent-background: var(--color-neutral-800);
+  --color-consent-border: var(--color-primary-500);
+  --color-consent-button-text: var(--color-primary-500);
+  --color-consent-notice-text-decoration: var(--color-primary-500);
+  --color-consent-overlay-background: var(--color-neutral-900);
+  --color-consent-overlay-main-text: var(--color-primary-500);
+  --color-consent-text: var(--color-neutral);
+  --color-form-background: var(--color-neutral);
+  --color-form-control-disabled: var(--color-primary-700);
+  --color-form-control: var(--color-secondary-500);
 }
 #consent-notice-container,
 #consent-overlay-container,
@@ -44,7 +51,7 @@
 #consent-overlay button.btn,
 #consent-notice button.btn,
 #consent-overlay > div {
-  border-color: rgb(var(--color-primary-500));
+  border-color: rgb(var(--color-consent-border));
   border-radius: 0.25rem;
   border-style: solid;
   border-width: 1px;
@@ -53,7 +60,7 @@
 #consent-notice button.btn,
 #consent-overlay button.btn {
   position: relative;
-  color: rgb(var(--color-primary-500));
+  color: rgb(var(--color-consent-button-text));
   cursor: pointer;
   padding: 10px;
   margin: 10px 10px 0px 10px;
@@ -66,8 +73,8 @@
 }
 #consent-notice,
 #consent-overlay > div {
-  color: rgb(var(--color-neutral));
-  background: rgb(var(--color-neutral-800));
+  color: rgb(var(--color-consent-text));
+  background: rgb(var(--color-consent-background));
   padding: 25px;
   max-width: 60rem;
   margin: auto;
@@ -84,7 +91,7 @@
 }
 #consent-notice span a:hover {
   text-decoration: underline;
-  text-decoration-color: rgb(var(--color-primary-500));
+  text-decoration-color: rgb(var(--color-consent-notice-text-decoration));
   text-decoration-thickness: 2px;
 }
 #consent-overlay.active,
@@ -93,7 +100,7 @@
   flex-wrap: nowrap;
 }
 #consent-overlay {
-  background: rgba(var(--color-neutral-900), 0.9);
+  background: rgba(var(--color-consent-overlay-background), 0.9);
   width: 100vw;
   height: 100vh;
   overflow: scroll;
@@ -113,7 +120,7 @@
   font-weight: var(--font-weight-bold);
 }
 #consent-overlay main {
-  color: rgb(var(--color-primary-500));
+  color: rgb(var(--color-consent-overlay-main-text));
 }
 .form-control {
   align-items: center;
@@ -125,7 +132,7 @@
   margin-top: 1em;
 }
 .form-control--disabled {
-  color: var(--form-control-disabled);
+  color: rgb(var(--color-form-control-disabled));
   cursor: not-allowed;
 }
 
@@ -135,7 +142,7 @@ input[type="checkbox"] {
   /* Remove most all native input styles */
   appearance: none;
   /* For iOS < 15 */
-  background-color: var(--form-background);
+  background-color: rgb(var(--color-form-background));
   /* Not removed via appearance */
   margin: 0;
 
@@ -158,7 +165,7 @@ input[type="checkbox"]::before {
   transform: scale(0);
   transform-origin: bottom left;
   transition: 120ms transform ease-in-out;
-  box-shadow: inset 1em 1em var(--form-control-color);
+  box-shadow: inset 1em 1em rgb(var(--color-form-control));
   /* Windows High Contrast Mode */
   background-color: CanvasText;
 }
@@ -166,8 +173,8 @@ input[type="checkbox"]:checked::before {
   transform: scale(1);
 }
 input[type="checkbox"]:disabled {
-  --form-control-color: var(--form-control-disabled);
+  --color-form-control: rgb(var(--color-form-control-disabled));
 
-  color: var(--form-control-disabled);
+  color: rgb(var(--color-form-control-disabled));
   cursor: not-allowed;
 }
