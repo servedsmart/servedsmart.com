@@ -122,7 +122,7 @@ showBreadcrumbs = false
 showViews = false
 showLikes = false
 showTableOfContents = false
-cardView = false
+cardView = true
 
 [term]
 showHero = true
@@ -132,7 +132,7 @@ showViews = false
 showLikes = false
 showTableOfContents = false
 groupByYear = false
-cardView = false
+cardView = true
 cardViewScreenWidth = false
 
 [firebase]
