@@ -57,10 +57,10 @@ showDate = false
 showViews = false
 showLikes = false
 showDateOnlyInArticle = false
-showDateUpdated = false
-showAuthor = false
+showDateUpdated = true
+showAuthor = true
 showAuthorBottom = false
-showHero = false
+showHero = true
 heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
 layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
 layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
@@ -95,7 +95,7 @@ sharingLinks = [
 showZenMode = false
 
 [list]
-showHero = false
+showHero = true
 heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
 layoutBackgroundBlur = true        # only used when heroStyle equals background or thumbAndBackground
 layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
@@ -116,7 +116,7 @@ excludedKinds = ["taxonomy", "term"]
 
 [taxonomy]
 showTermCount = true
-showHero = false
+showHero = true
 heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
 showBreadcrumbs = false
 showViews = false
@@ -125,7 +125,7 @@ showTableOfContents = false
 cardView = false
 
 [term]
-showHero = false
+showHero = true
 heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
 showBreadcrumbs = false
 showViews = false
