@@ -80,12 +80,12 @@ weight = 20
 
 [[footer]]
 name = "Legal Disclosure"
-url = "/terms/impressum/"
+url = "/en/terms/impressum/"
 weight = 100
 
 [[footer]]
 name = "Privacy Policy"
-url = "/terms/privacy-policy/"
+url = "/en/terms/privacy-policy/"
 weight = 101
 
 [[footer]]
