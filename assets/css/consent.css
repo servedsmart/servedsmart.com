@@ -10,14 +10,14 @@
 
 :root {
   --color-consent-background: var(--color-neutral-800);
-  --color-consent-border: var(--color-primary-500);
-  --color-consent-button-text: var(--color-primary-500);
-  --color-consent-notice-text-decoration: var(--color-primary-500);
+  --color-consent-border: var(--color-primary-400);
+  --color-consent-button-text: var(--color-primary-400);
+  --color-consent-notice-text-decoration: var(--color-primary-400);
   --color-consent-overlay-background: var(--color-neutral-900);
-  --color-consent-overlay-main-text: var(--color-primary-500);
+  --color-consent-overlay-main-text: var(--color-primary-400);
   --color-consent-text: var(--color-neutral);
   --color-form-background: var(--color-neutral);
-  --color-form-control-disabled: var(--color-primary-700);
+  --color-form-control-disabled: var(--color-neutral-400);
   --color-form-control: var(--color-secondary-500);
 }
 #consent-notice-container,
