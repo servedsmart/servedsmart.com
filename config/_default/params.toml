@@ -43,7 +43,7 @@ showScrollToTop = true
 
 [homepage]
 layout = "background"            # valid options: page, profile, hero, card, background, custom
-homepageImage = "IMAGE.jpg"   # used in: hero, and card
+homepageImage = "/img/background-optimized.svg"   # used in: hero, and card
 showRecent = true
 showRecentItems = 12
 showMoreLink = true
@@ -61,7 +61,7 @@ showDateUpdated = false
 showAuthor = false
 showAuthorBottom = false
 showHero = false
-# heroStyle = "basic" # valid options: basic, big, background, thumbAndBackground
+heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
 layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
 layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
 showBreadcrumbs = true
@@ -96,7 +96,7 @@ showZenMode = false
 
 [list]
 showHero = false
-# heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
+heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
 layoutBackgroundBlur = true        # only used when heroStyle equals background or thumbAndBackground
 layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
 showBreadcrumbs = false
@@ -117,7 +117,7 @@ excludedKinds = ["taxonomy", "term"]
 [taxonomy]
 showTermCount = true
 showHero = false
-# heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
+heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
 showBreadcrumbs = false
 showViews = false
 showLikes = false
@@ -126,7 +126,7 @@ cardView = false
 
 [term]
 showHero = false
-# heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
+heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
 showBreadcrumbs = false
 showViews = false
 showLikes = false
