@@ -21,7 +21,7 @@ disableImageOptimization = false
 disableTextInHeader = false
 # backgroundImageWidth = 1200
 
-# defaultBackgroundImage = "IMAGE.jpg" # used as default for background images 
+defaultBackgroundImage = "img/background-optimized.svg" # used as default for background images 
 # defaultFeaturedImage = "IMAGE.jpg" # used as default for featured images in all articles
 
 highlightCurrentMenuArea = true
@@ -42,7 +42,7 @@ showAppearanceSwitcher = true
 showScrollToTop = true
 
 [homepage]
-layout = "profile"            # valid options: page, profile, hero, card, background, custom
+layout = "background"            # valid options: page, profile, hero, card, background, custom
 homepageImage = "IMAGE.jpg"   # used in: hero, and card
 showRecent = true
 showRecentItems = 12
@@ -50,7 +50,7 @@ showMoreLink = true
 showMoreLinkDest = "services"
 cardView = true
 cardViewScreenWidth = false
-layoutBackgroundBlur = false  # only used when layout equals background
+layoutBackgroundBlur = true  # only used when layout equals background
 
 [article]
 showDate = false
