@@ -10,17 +10,11 @@
 
 // Wait for readyState
 function waitForReadyState(fn) {
-  if (
-    document.readyState === "interactive" ||
-    document.readyState === "complete"
-  ) {
+  if (["interactive", "complete"].includes(document.readyState)) {
     fn();
   } else {
     document.addEventListener("readystatechange", function checkReadyState() {
-      if (
-        document.readyState === "interactive" ||
-        document.readyState === "complete"
-      ) {
+      if (["interactive", "complete"].includes(document.readyState)) {
         fn();
         document.removeEventListener("readystatechange", checkReadyState);
       }
@@ -34,7 +28,8 @@ function setLocalStorage(consentValue) {
 }
 // Get from localStorage or remove if optionalScripts don't match
 function getLocalStorageOrRemove() {
-  if (localStorage.getItem("optional-scripts") === optionalScripts.toString()) {
+  const storedScripts = localStorage.getItem("optional-scripts");
+  if (storedScripts === optionalScripts.toString()) {
     return localStorage.getItem("consent-settings");
   } else {
     localStorage.removeItem("optional-scripts");
@@ -44,11 +39,7 @@ function getLocalStorageOrRemove() {
 }
 // Calculate consentValue, string should be either "0" or "1"
 function getConsentValue(scripts, string) {
-  let consentValue = "";
-  scripts.forEach(() => {
-    consentValue = consentValue + string;
-  });
-  return consentValue;
+  return scripts.map(() => string).join("");
 }
 // Load optional javascript
 function loadOptionalJS(consentValue) {
@@ -62,12 +53,9 @@ function loadOptionalJS(consentValue) {
   setLocalStorage(consentValue);
   loadJS(optionalScripts, consentValue);
 }
-// Load funcional javascript
+// Load functional javascript
 function loadFunctionalJS() {
-  let consentValue = "";
-  functionalScripts.forEach(() => {
-    consentValue = consentValue + "1";
-  });
+  const consentValue = getConsentValue(functionalScripts, "1");
   loadJS(functionalScripts, consentValue);
 }
 // Load javascript
@@ -81,7 +69,7 @@ function loadJS(scripts, consentValue) {
       !documentScripts.includes(window.location.origin + value) &&
       consentValue[key] === "1"
     ) {
-      let script = document.createElement("script");
+      const script = document.createElement("script");
       script.type = "text/javascript";
       script.src = value;
       document.body.appendChild(script);
@@ -102,10 +90,9 @@ function setConsentValue() {
   const elements = document.querySelectorAll(
     "#consent-overlay input:not([disabled])"
   );
-  let consentValue = "";
-  elements.forEach((element) => {
-    consentValue = element.checked ? consentValue + "1" : consentValue + "0";
-  });
+  const consentValue = Array.from(elements)
+    .map((element) => (element.checked ? "1" : "0"))
+    .join("");
   document.getElementById("consent-settings-confirm").dataset.consentvalue =
     consentValue;
 }
@@ -156,8 +143,8 @@ waitForReadyState(() => {
   };
 
   // Load javascript if user has consented or show notice
-  if (getLocalStorageOrRemove()) {
-    const consentValue = getLocalStorageOrRemove();
+  const consentValue = getLocalStorageOrRemove();
+  if (consentValue) {
     setCheckboxes(consentValue);
     loadJS(optionalScripts, consentValue);
   } else {
@@ -168,18 +155,17 @@ waitForReadyState(() => {
     window.location.href = "#consent-overlay";
   });
   addClickExec(document.querySelectorAll(".consent-reject-optional"), () => {
-    let consentValue = getConsentValue(optionalScripts, "0");
+    const consentValue = getConsentValue(optionalScripts, "0");
     loadOptionalJS(consentValue);
   });
   addClickExec(document.querySelectorAll(".consent-accept-all"), () => {
-    let consentValue = getConsentValue(optionalScripts, "1");
+    const consentValue = getConsentValue(optionalScripts, "1");
     loadOptionalJS(consentValue);
   });
   addClickExec(document.getElementById("consent-settings-confirm"), (event) => {
     setConsentValue();
     loadOptionalJS(event.currentTarget.dataset.consentvalue);
   });
-  // Remove active attribute if clicking outside of div
   addClickExec(document.getElementById("consent-overlay"), (event) => {
     if (
       !document.querySelector("#consent-overlay > div").contains(event.target)
