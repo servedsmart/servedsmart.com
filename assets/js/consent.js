@@ -77,12 +77,10 @@ function loadJS(scripts, consentValue) {
   );
   scripts.forEach((value, key) => {
     if (
-      documentScripts.includes(value) ||
-      documentScripts.includes(window.location.origin + value)
+      !documentScripts.includes(value) &&
+      !documentScripts.includes(window.location.origin + value) &&
+      consentValue[key] === "1"
     ) {
-      return;
-    }
-    if (consentValue[key] === "1") {
       let script = document.createElement("script");
       script.type = "text/javascript";
       script.src = value;
