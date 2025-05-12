@@ -32,7 +32,7 @@ function setLocalStorage(consentValue) {
   localStorage.setItem("optional-scripts", optionalScripts.toString());
   localStorage.setItem("consent-settings", consentValue);
 }
-// Get from localStorage and remove if optionalScripts don't match
+// Get from localStorage or remove if optionalScripts don't match
 function getLocalStorageOrRemove() {
   if (localStorage.getItem("optional-scripts") === optionalScripts.toString()) {
     return localStorage.getItem("consent-settings");
