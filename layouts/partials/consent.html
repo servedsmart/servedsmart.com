@@ -11,7 +11,7 @@
 {{- $style := resources.Get "css/consent.css" | minify | fingerprint -}}
 <link rel="stylesheet" href="{{- $style.Permalink -}}" />
 
-<div id="consent-notice-container">
+<div id="consent-notice-container" class="backdrop-blur">
   <div
     id="consent-notice"
     class="text-base font-medium bg-neutral dark:bg-neutral-800 text-neutral-800 dark:text-neutral-300 border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl"
@@ -38,7 +38,7 @@
     </button>
   </div>
 </div>
-<div id="consent-overlay-container">
+<div id="consent-overlay-container" class="backdrop-blur">
   <div id="consent-overlay" class="overflow-auto">
     <div
       class="text-base font-medium bg-neutral dark:bg-neutral-800 text-neutral-800 dark:text-neutral-300 border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl"
