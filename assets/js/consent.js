@@ -58,7 +58,7 @@ function loadOptionalJS(consentValue) {
     setLocalStorage("0");
     return;
   }
-  setConsentInputs(consentValue);
+  setCheckboxes(consentValue);
   setLocalStorage(consentValue);
   loadJS(optionalScripts, consentValue);
 }
@@ -88,8 +88,8 @@ function loadJS(scripts, consentValue) {
     }
   });
 }
-// Set consent value via checkboxes
-function setConsentInputs(consentValue) {
+// Set checkboxes from consentValue
+function setCheckboxes(consentValue) {
   const elements = document.querySelectorAll(
     "#consent-overlay input:not([disabled])"
   );
@@ -155,7 +155,7 @@ waitForReadyState(() => {
   // Load javascript if user has consented or show notice
   if (getLocalStorageOrRemove()) {
     const consentValue = getLocalStorageOrRemove();
-    setConsentInputs(consentValue);
+    setCheckboxes(consentValue);
     loadJS(optionalScripts, consentValue);
   } else {
     activateWithParent(document.getElementById("consent-notice"));
