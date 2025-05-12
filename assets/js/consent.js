@@ -117,6 +117,9 @@ function setUnchecked(elements) {
 }
 // Handle event listeners on click for elements
 function addClickExec(elements, fn) {
+  if (elements instanceof HTMLElement) {
+    elements = [elements];
+  }
   elements.forEach((element) => {
     element.addEventListener("click", fn);
   });
@@ -172,20 +175,16 @@ waitForReadyState(() => {
     let consentValue = getConsentValue(optionalScripts, "1");
     loadOptionalJS(consentValue);
   });
-  document
-    .getElementById("consent-settings-confirm")
-    .addEventListener("click", (event) => {
-      setConsentValue();
-      loadOptionalJS(event.currentTarget.dataset.consentvalue);
-    });
+  addClickExec(document.getElementById("consent-settings-confirm"), (event) => {
+    setConsentValue();
+    loadOptionalJS(event.currentTarget.dataset.consentvalue);
+  });
   // Remove active attribute if clicking outside of div
-  document
-    .getElementById("consent-overlay")
-    .addEventListener("click", (event) => {
-      if (
-        !document.querySelector("#consent-overlay > div").contains(event.target)
-      ) {
-        deactivateWithParent(event.currentTarget);
-      }
-    });
+  addClickExec(document.getElementById("consent-overlay"), (event) => {
+    if (
+      !document.querySelector("#consent-overlay > div").contains(event.target)
+    ) {
+      deactivateWithParent(event.currentTarget);
+    }
+  });
 });
