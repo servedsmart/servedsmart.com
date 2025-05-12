@@ -42,13 +42,13 @@ function getLocalStorageOrRemove() {
     return null;
   }
 }
-// Modify all consent scripts, string should be either "0" or "1"
-function modifyAllConsent(scripts, string) {
+// Calculate consentValue, string should be either "0" or "1"
+function getConsentValue(scripts, string) {
   let consentValue = "";
   scripts.forEach(() => {
     consentValue = consentValue + string;
   });
-  loadOptionalJS(consentValue);
+  return consentValue;
 }
 // Load optional javascript
 function loadOptionalJS(consentValue) {
@@ -167,10 +167,12 @@ waitForReadyState(() => {
     window.location.href = "#consent-overlay";
   });
   addClickExec(document.querySelectorAll(".consent-reject-optional"), () => {
-    modifyAllConsent(optionalScripts, "0");
+    let consentValue = getConsentValue(optionalScripts, "0");
+    loadOptionalJS(consentValue);
   });
   addClickExec(document.querySelectorAll(".consent-accept-all"), () => {
-    modifyAllConsent(optionalScripts, "1");
+    let consentValue = getConsentValue(optionalScripts, "1");
+    loadOptionalJS(consentValue);
   });
   document
     .getElementById("consent-settings-confirm")
