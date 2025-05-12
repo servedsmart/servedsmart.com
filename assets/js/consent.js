@@ -93,7 +93,7 @@ function setConsentInputs(consentValue) {
   const elements = document.querySelectorAll(
     "#consent-overlay input:not([disabled])"
   );
-  elements.forEach(function (element, index) {
+  elements.forEach((element, index) => {
     element.checked = consentValue[index] === "1";
   });
 }
@@ -103,7 +103,7 @@ function setConsentValue() {
     "#consent-overlay input:not([disabled])"
   );
   let consentValue = "";
-  elements.forEach(function (element) {
+  elements.forEach((element) => {
     consentValue = element.checked ? consentValue + "1" : consentValue + "0";
   });
   document.getElementById("consent-settings-confirm").dataset.consentvalue =
