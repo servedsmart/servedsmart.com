@@ -79,9 +79,9 @@ function setCheckboxes(consentValue) {
   const elements = document.querySelectorAll(
     "#consent-overlay input:not([disabled])"
   );
-  elements.forEach((element, index) => {
-    element.checked = consentValue[index] === "1";
-  });
+  elements.forEach(
+    (element, index) => (element.checked = consentValue[index] === "1")
+  );
 }
 // Set consent value from checkboxes
 function setConsentValue() {
@@ -96,17 +96,15 @@ function setConsentValue() {
 }
 // Set all elements unchecked
 function setUnchecked(elements) {
-  elements.forEach((element) => {
-    element.checked = false;
-  });
+  elements.forEach((element) => (element.checked = false));
 }
 // Handle event listeners on click for elements
-function addClickExec(elements, fn) {
+function addClickExec(elements, function_) {
   if (elements instanceof HTMLElement) {
     elements = [elements];
   }
   elements.forEach((element) => {
-    element.addEventListener("click", fn);
+    element.addEventListener("click", function_);
   });
 }
 // Activate element and parentElement
