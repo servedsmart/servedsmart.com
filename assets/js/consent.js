@@ -149,9 +149,6 @@ waitForReadyState(() => {
     activateWithParent(document.getElementById("consent-notice"));
   }
   // Handle consent buttons
-  addClickExec(document.querySelectorAll(".consent-settings"), () => {
-    window.location.href = "#consent-overlay";
-  });
   addClickExec(document.querySelectorAll(".consent-reject-optional"), () => {
     const consentValue = getConsentValue(optionalScripts, "0");
     loadOptionalJS(consentValue);
@@ -159,6 +156,9 @@ waitForReadyState(() => {
   addClickExec(document.querySelectorAll(".consent-accept-all"), () => {
     const consentValue = getConsentValue(optionalScripts, "1");
     loadOptionalJS(consentValue);
+  });
+  addClickExec(document.getElementById("consent-settings"), () => {
+    window.location.href = "#consent-overlay";
   });
   addClickExec(document.getElementById("consent-settings-confirm"), (event) => {
     setConsentValue();
