@@ -24,6 +24,8 @@
 #consent-notice-container,
 #consent-overlay-container,
 #consent-overlay {
+  width: 100vw;
+  height: 100vh;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -69,8 +71,6 @@
   flex-wrap: nowrap;
 }
 #consent-overlay {
-  width: 100vw;
-  height: 100vh;
   align-items: center;
 }
 #consent-overlay > div > div {
