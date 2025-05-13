@@ -122,7 +122,7 @@ function deactivateWithParent(element) {
 waitForReadyState(() => {
   // Set empty hash if in consent-overlay
   if (window.location.hash === "#consent-overlay") {
-    window.location.hash = "#";
+    window.location.hash = "#consent-exit";
   }
 
   // Load functional javascript
