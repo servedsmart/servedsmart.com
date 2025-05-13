@@ -28,6 +28,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+  top: 0;
   justify-content: center;
 }
 #consent-notice-container {
@@ -36,10 +37,6 @@
 #consent-notice-container.active,
 #consent-overlay-container.active {
   display: flex;
-}
-#consent-notice-container,
-#consent-overlay-container {
-  top: 0;
 }
 #consent-overlay-container {
   align-items: center;
