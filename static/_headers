@@ -73,8 +73,8 @@
   Permissions-Policy: unload=()
   Permissions-Policy: vertical-scroll=()
   ## https://github.com/w3c/webappsec-permissions-policy/blob/main/features.md#retired-features
-  document-domain=()
-  window-placement=()
+  Permissions-Policy: document-domain=()
+  Permissions-Policy: window-placement=()
   # https://owasp.org/www-project-secure-headers/#strict-transport-security
   Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
   # https://owasp.org/www-project-secure-headers/#x-frame-options
