@@ -1,32 +1,15 @@
 /*
-  # https://owasp.org/www-project-secure-headers/#permissions-policy
-  ## https://github.com/w3c/webappsec-permissions-policy/blob/main/features.md#standardized-features
-  ## https://github.com/w3c/webappsec-permissions-policy/blob/main/features.md#proposed-features
-  ## https://github.com/w3c/webappsec-permissions-policy/blob/main/features.md#experimental-features
-  ## https://github.com/w3c/webappsec-permissions-policy/blob/main/features.md#retired-features
   Permissions-Policy: accelerometer=(), ambient-light-sensor=(), attribution-reporting=(), autoplay=(), battery=(), bluetooth=(), camera=(), ch-ua=(), ch-ua-arch=(), ch-ua-bitness=(), ch-ua-full-version=(), ch-ua-full-version-list=(), ch-ua-high-entropy-values=(), ch-ua-mobile=(), ch-ua-model=(), ch-ua-platform=(), ch-ua-platform-version=(), ch-ua-wow64=(), compute-pressure=(), cross-origin-isolated=(), direct-sockets=(), display-capture=(), encrypted-media=(), execution-while-not-rendered=(), execution-while-out-of-viewport=(), fullscreen=(self "https://www.youtube-nocookie.com"), geolocation=(), gyroscope=(), hid=(), identity-credentials-get=(), idle-detection=(), keyboard-map=(), magnetometer=(), mediasession=(), microphone=(), midi=(), navigation-override=(), otp-credentials=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), serial=(), sync-xhr=(), storage-access=(), usb=(), web-share=(), window-management=(), xr-spatial-tracking=(), clipboard-read=(), clipboard-write=(self), deferred-fetch=(), gamepad=(), shared-autofill=(), speaker-selection=(), all-screens-capture=(), browsing-topics=(), captured-surface-control=(), conversion-measurement=(), digital-credentials-get=(), focus-without-user-activation=(), join-ad-interest-group=(), local-fonts=(), run-ad-auction=(), smart-card=(), sync-script=(), trust-token-redemption=(), unload=(), vertical-scroll=(), document-domain=(), window-placement=()
-  # https://owasp.org/www-project-secure-headers/#strict-transport-security
   Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
-  # https://owasp.org/www-project-secure-headers/#x-frame-options
   X-Frame-Options: deny
-  # https://owasp.org/www-project-secure-headers/#x-content-type-options
   X-Content-Type-Options: nosniff
-  # https://content-security-policy.com/
   Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' blob: data:; connect-src 'self'; font-src 'self'; object-src 'self'; media-src blob:; frame-src blob: https://www.youtube-nocookie.com; child-src blob: https://www.youtube-nocookie.com; form-action 'none'; frame-ancestors 'none'; base-uri 'none'; worker-src 'none'; manifest-src 'self'; prefetch-src 'none' require-trusted-types-for 'script' trusted-types 'none' upgrade-insecure-requests; block-all-mixed-content;
-  # https://owasp.org/www-project-secure-headers/#x-permitted-cross-domain-policies
   X-Permitted-Cross-Domain-Policies: none
-  # https://owasp.org/www-project-secure-headers/#referrer-policy
   Referrer-Policy: no-referrer
-  # https://owasp.org/www-project-secure-headers/#clear-site-data
-  # https://owasp.org/www-project-secure-headers/#cross-origin-embedder-policy
   Cross-Origin-Embedder-Policy: require-corp
-  # https://owasp.org/www-project-secure-headers/#cross-origin-opener-policy
   Cross-Origin-Opener-Policy: same-origin
-  # https://owasp.org/www-project-secure-headers/#cross-origin-resource-policy
   Cross-Origin-Resource-Policy: same-origin
-  # Deprecated: https://owasp.org/www-project-secure-headers/#x-xss-protection
   X-XSS-Protection: 0
 
-# See: https://github.com/sveltia/sveltia-cms?tab=readme-ov-file#setting-up-content-security-policy
 /edit-cms/*
   Content-Security-Policy: style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' blob: data: https://*.githubusercontent.com https://images.pexels.com https://pixabay.com https://images.unsplash.com; media-src blob:; frame-src blob: https://www.youtube-nocookie.com; child-src blob: https://www.youtube-nocookie.com; script-src 'self' https://unpkg.com; connect-src 'self' blob: data: https://unpkg.com https://api.github.com https://www.githubstatus.com https://images.pexels.com https://api.pexels.com https://pixabay.com https://images.unsplash.com https://api.unsplash.com;
