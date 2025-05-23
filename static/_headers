@@ -1,10 +1,80 @@
 /*
   # https://owasp.org/www-project-secure-headers/#permissions-policy
   ## https://github.com/w3c/webappsec-permissions-policy/blob/main/features.md#standardized-features
+  Permissions-Policy: accelerometer=()
+  Permissions-Policy: ambient-light-sensor=()
+  Permissions-Policy: attribution-reporting=()
+  Permissions-Policy: autoplay=()
+  Permissions-Policy: battery=()
+  Permissions-Policy: bluetooth=()
+  Permissions-Policy: camera=()
+  Permissions-Policy: ch-ua=()
+  Permissions-Policy: ch-ua-arch=()
+  Permissions-Policy: ch-ua-bitness=()
+  Permissions-Policy: ch-ua-full-version=()
+  Permissions-Policy: ch-ua-full-version-list=()
+  Permissions-Policy: ch-ua-high-entropy-values=()
+  Permissions-Policy: ch-ua-mobile=()
+  Permissions-Policy: ch-ua-model=()
+  Permissions-Policy: ch-ua-platform=()
+  Permissions-Policy: ch-ua-platform-version=()
+  Permissions-Policy: ch-ua-wow64=()
+  Permissions-Policy: compute-pressure=()
+  Permissions-Policy: cross-origin-isolated=()
+  Permissions-Policy: direct-sockets=()
+  Permissions-Policy: display-capture=()
+  Permissions-Policy: encrypted-media=()
+  Permissions-Policy: execution-while-not-rendered=()
+  Permissions-Policy: execution-while-out-of-viewport=()
+  Permissions-Policy: fullscreen=(self "https://www.youtube-nocookie.com")
+  Permissions-Policy: geolocation=()
+  Permissions-Policy: gyroscope=()
+  Permissions-Policy: hid=()
+  Permissions-Policy: identity-credentials-get=()
+  Permissions-Policy: idle-detection=()
+  Permissions-Policy: keyboard-map=()
+  Permissions-Policy: magnetometer=()
+  Permissions-Policy: mediasession=()
+  Permissions-Policy: microphone=()
+  Permissions-Policy: midi=()
+  Permissions-Policy: navigation-override=()
+  Permissions-Policy: otp-credentials=()
+  Permissions-Policy: payment=()
+  Permissions-Policy: picture-in-picture=()
+  Permissions-Policy: publickey-credentials-get=()
+  Permissions-Policy: screen-wake-lock=()
+  Permissions-Policy: serial=()
+  Permissions-Policy: sync-xhr=()
+  Permissions-Policy: storage-access=()
+  Permissions-Policy: usb=()
+  Permissions-Policy: web-share=()
+  Permissions-Policy: window-management=()
+  Permissions-Policy: xr-spatial-tracking=()
   ## https://github.com/w3c/webappsec-permissions-policy/blob/main/features.md#proposed-features
+  Permissions-Policy: clipboard-read=()
+  Permissions-Policy: clipboard-write=(self)
+  Permissions-Policy: deferred-fetch=()
+  Permissions-Policy: gamepad=()
+  Permissions-Policy: shared-autofill=()
+  Permissions-Policy: speaker-selection=()
   ## https://github.com/w3c/webappsec-permissions-policy/blob/main/features.md#experimental-features
+  Permissions-Policy: all-screens-capture=()
+  Permissions-Policy: browsing-topics=()
+  Permissions-Policy: captured-surface-control=()
+  Permissions-Policy: conversion-measurement=()
+  Permissions-Policy: digital-credentials-get=()
+  Permissions-Policy: focus-without-user-activation=()
+  Permissions-Policy: join-ad-interest-group=()
+  Permissions-Policy: local-fonts=()
+  Permissions-Policy: run-ad-auction=()
+  Permissions-Policy: smart-card=()
+  Permissions-Policy: sync-script=()
+  Permissions-Policy: trust-token-redemption=()
+  Permissions-Policy: unload=()
+  Permissions-Policy: vertical-scroll=()
   ## https://github.com/w3c/webappsec-permissions-policy/blob/main/features.md#retired-features
-  Permission-Policy: accelerometer=(), ambient-light-sensor=(), attribution-reporting=(), autoplay=(), battery=(), bluetooth=(), camera=(), ch-ua=(), ch-ua-arch=(), ch-ua-bitness=(), ch-ua-full-version=(), ch-ua-full-version-list=(), ch-ua-high-entropy-values=(), ch-ua-mobile=(), ch-ua-model=(), ch-ua-platform=(), ch-ua-platform-version=(), ch-ua-wow64=(), compute-pressure=(), cross-origin-isolated=(), direct-sockets=(), display-capture=(), encrypted-media=(), execution-while-not-rendered=(), execution-while-out-of-viewport=(), fullscreen=(self "https://www.youtube-nocookie.com"), geolocation=(), gyroscope=(), hid=(), identity-credentials-get=(), idle-detection=(), keyboard-map=(), magnetometer=(), mediasession=(), microphone=(), midi=(), navigation-override=(), otp-credentials=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), serial=(), sync-xhr=(), storage-access=(), usb=(), web-share=(), window-management=(), xr-spatial-tracking=(), clipboard-read=(), clipboard-write=(self), deferred-fetch=(), gamepad=(), shared-autofill=(), speaker-selection=(), all-screens-capture=(), browsing-topics=(), captured-surface-control=(), conversion-measurement=(), digital-credentials-get=(), focus-without-user-activation=(), join-ad-interest-group=(), local-fonts=(), run-ad-auction=(), smart-card=(), sync-script=(), trust-token-redemption=(), unload=(), vertical-scroll=(), document-domain=(), window-placement=()
+  Permissions-Policy: document-domain=()
+  Permissions-Policy: window-placement=()
   # https://owasp.org/www-project-secure-headers/#strict-transport-security
   Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
   # https://owasp.org/www-project-secure-headers/#x-frame-options
@@ -19,9 +89,9 @@
   Referrer-Policy: no-referrer
   # https://owasp.org/www-project-secure-headers/#clear-site-data
   # https://owasp.org/www-project-secure-headers/#cross-origin-embedder-policy
-  Cross-Origin-Embedder-Policy : require-corp
+  Cross-Origin-Embedder-Policy: require-corp
   # https://owasp.org/www-project-secure-headers/#cross-origin-opener-policy
-  Cross-Origin-Opener-Policy : same-origin
+  Cross-Origin-Opener-Policy: same-origin
   # https://owasp.org/www-project-secure-headers/#cross-origin-resource-policy
   Cross-Origin-Resource-Policy: same-origin
   # Deprecated: https://owasp.org/www-project-secure-headers/#x-xss-protection
