@@ -10,9 +10,8 @@
 
 <!-- Based on: https://hugocodex.org/add-ons/cookie-consent/#manage-consent -->
 
-{{ $style := resources.Get "css/consent.css" }} {{ $style = $style |
-resources.Minify | resources.Fingerprint (.Site.Params.fingerprintAlgorithm |
-default "sha512") }}
+{{ $style := resources.Get "css/consent.css" }}
+{{ $style = $style | resources.Minify | resources.Fingerprint (.Site.Params.fingerprintAlgorithm | default "sha512") }}
 <link
   type="text/css"
   rel="stylesheet"
@@ -106,22 +105,26 @@ default "sha512") }}
   </div>
 </div>
 
-{{ $scriptData := newScratch }} {{ range $.Site.Params.consent.items }} {{ if
-.scriptFile }} {{ $scriptFile := resources.Get .scriptFile }} {{ $scriptFile =
-$scriptFile | resources.ExecuteAsTemplate .script_file . | resources.Minify |
-resources.Fingerprint ($.Site.Params.fingerprintAlgorithm | default "sha512") }}
-{{ if .isFunctional }} {{ $scriptData.Add "functionalScripts" (print
-$scriptFile.RelPermalink " ") }} {{ $scriptData.Add "functionalScriptHashes"
-(print $scriptFile.Data.Integrity " ") }} {{ else }} {{ $scriptData.Add
-"optionalScripts" (print $scriptFile.RelPermalink " ") }} {{ $scriptData.Add
-"optionalScriptHashes" (print $scriptFile.Data.Integrity " ") }} {{ end }} {{
-end }} {{ end }} {{ $functionalScripts := trim ($scriptData.Get
-"functionalScripts") " " }} {{ $functionalScriptHashes := trim ($scriptData.Get
-"functionalScriptHashes") " " }} {{ $optionalScripts := trim ($scriptData.Get
-"optionalScripts") " " }} {{ $optionalScriptHashes := trim ($scriptData.Get
-"optionalScriptHashes") " " }} {{ $consent := resources.Get "js/consent.js" }}
-{{ $consent = $consent | resources.Minify | resources.Fingerprint
-(.Site.Params.fingerprintAlgorithm | default "sha512") }}
+{{ $scriptData := newScratch }}
+{{ range $.Site.Params.consent.items }}
+  {{ if .scriptFile }}
+    {{ $scriptFile := resources.Get .scriptFile }}
+    {{ $scriptFile = $scriptFile | resources.ExecuteAsTemplate .script_file . | resources.Minify | resources.Fingerprint ($.Site.Params.fingerprintAlgorithm | default "sha512") }}
+      {{ if .isFunctional }}
+        {{ $scriptData.Add "functionalScripts" (print $scriptFile.RelPermalink " ") }}
+        {{ $scriptData.Add "functionalScriptHashes" (print $scriptFile.Data.Integrity " ") }}
+      {{ else }}
+        {{ $scriptData.Add "optionalScripts" (print $scriptFile.RelPermalink " ") }}
+        {{ $scriptData.Add "optionalScriptHashes" (print $scriptFile.Data.Integrity " ") }}
+      {{ end }}
+  {{ end }}
+{{ end }}
+{{ $functionalScripts := trim ($scriptData.Get "functionalScripts") " " }}
+{{ $functionalScriptHashes := trim ($scriptData.Get "functionalScriptHashes") " " }}
+{{ $optionalScripts := trim ($scriptData.Get "optionalScripts") " " }}
+{{ $optionalScriptHashes := trim ($scriptData.Get "optionalScriptHashes") " " }}
+{{ $consent := resources.Get "js/consent.js" }}
+{{ $consent = $consent | resources.Minify | resources.Fingerprint (.Site.Params.fingerprintAlgorithm | default "sha512") }}
 
 <script
   type="text/javascript"
