@@ -1968,6 +1968,12 @@ body.zen-mode-enable {
   .\!text-neutral {
     color: rgba(var(--color-neutral), 1) !important;
   }
+  .\!text-neutral-300 {
+    color: rgba(var(--color-neutral-300), 1) !important;
+  }
+  .\!text-secondary-400 {
+    color: rgba(var(--color-secondary-400), 1) !important;
+  }
   .text-neutral-50 {
     color: rgba(var(--color-neutral-50), 1);
   }
@@ -3184,11 +3190,6 @@ body.zen-mode-enable {
       background-color: rgba(var(--color-neutral-400), 1);
     }
   }
-  .dark\:bg-neutral-500 {
-    &:is(.dark *) {
-      background-color: rgba(var(--color-neutral-500), 1);
-    }
-  }
   .dark\:bg-neutral-600 {
     &:is(.dark *) {
       background-color: rgba(var(--color-neutral-600), 1);
@@ -3262,6 +3263,11 @@ body.zen-mode-enable {
     &:is(.dark *) {
       --tw-gradient-to: rgba(var(--color-secondary-800), 1);
       --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+    }
+  }
+  .dark\:\!text-secondary-500 {
+    &:is(.dark *) {
+      color: rgba(var(--color-secondary-500), 1) !important;
     }
   }
   .dark\:text-neutral {

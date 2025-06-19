@@ -46,11 +46,11 @@
     <div class="flex items-center p-[10px]">
       <input
         {{ if $item.isFunctional }}
-        class="w-6 h-6 bg-neutral-300 dark:bg-neutral-500 dark:border-neutral-500 mr-5 rounded-sm"
+        class="w-6 h-6 !text-neutral-300 dark:border-neutral-500 mr-5 rounded-sm"
         checked
         disabled
         {{ else }}
-        class="w-6 h-6 bg-neutral focus:ring-neutral-500 dark:focus:ring-neutral-700 dark:ring-offset-neutral-800 focus:ring-2 dark:bg-neutral-700 dark:border-neutral-700 mr-5 rounded-sm"
+        class="w-6 h-6 !text-secondary-400 dark:!text-secondary-500 focus:ring-neutral-500 dark:focus:ring-neutral-700 dark:ring-offset-neutral-800 focus:ring-2 dark:border-neutral-700 mr-5 rounded-sm"
         {{ end }}
         id="item{{ $index }}"
         type="checkbox"
