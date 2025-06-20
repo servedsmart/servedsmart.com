@@ -8,8 +8,6 @@ categories = [
 ]
 # Tags are used for more specific, detailed topics.
 tags = []
-[cascade]
-showReadingTime = false
 +++
 
 This section contains all services provided by Served Smart.

@@ -21,8 +21,6 @@ tags = [
  'access point',
  'wartung',
 ]
-[cascade]
-showReadingTime = false
 +++
 
 Nehmen Sie die Digitalisierung selbst in die Hand - einfach und unkompliziert!

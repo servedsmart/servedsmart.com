@@ -21,8 +21,6 @@ tags = [
  'access point',
  'maintenance',
 ]
-[cascade]
-showReadingTime = false
 +++
 
 Take digitalization into your own hands - easy and stress-free!
